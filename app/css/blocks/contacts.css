@@ -1,0 +1,7 @@
+.sections--contacts .sections__block{
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+}
+

@@ -1,0 +1,47 @@
+
+
+.advantage__list{
+    list-style: none;
+    text-align: center;
+
+    display: flex;
+}
+
+.advantage__item{
+    width: 300px;
+
+    margin-right: 20px;
+}
+
+.advantage__item:last-child{
+    margin-right: 0;
+}
+
+.advantage__img-block{
+    width: 100px;
+    height: 90px;
+
+    overflow: hidden;
+
+    margin: 0 auto;
+
+    margin-bottom: 33px;
+}
+
+.advantage__image{
+    max-width: 100%;
+    max-height: 100%;
+    
+    object-fit: contain;
+}
+
+.advantage__title{
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.advantage__description{
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(47, 50, 52, 0.8);
+}

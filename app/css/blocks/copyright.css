@@ -1,0 +1,30 @@
+/* copyright */
+
+.footer__copyright-street{
+    color:white;
+    font-size: 14px;
+    font-weight: 400;
+
+    margin-bottom: 12px;
+}
+
+.footer__copyright-number{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #e45028;
+}
+
+.footer__copyright-number:before{
+    content: "";
+    display: inline-block;
+
+    background-image: url('../../img/contacts/phone.svg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 11px;
+
+    margin-right: 6px;
+}

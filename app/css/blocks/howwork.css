@@ -1,0 +1,10 @@
+.sections--howwork .sections__block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sections--howwork .sections__title{
+    margin-bottom: 50px;
+}

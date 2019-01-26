@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box; 
+}
+
+/*
+html{
+    font-size: 72px;
+}
+*/
+
+body {
+    font-family: 'ubuntu', Helvetica, sans-serif;
+    line-height: 1.45;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-smoothing: antialiased;    
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+ul, 
+li {
+    margin:0;
+    padding:0;
+}
+
+h1,h2,h3,h4{
+    margin: 0;
+}
+
+h1,h2,h4 {
+    font-family: 'gagalin', Verdana, Tahoma, sans-serif;
+    line-height: 0.95;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-smoothing: antialiased; 
+
+    font-size: 72px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: 'lifehack', fantasy, sans-serif;
+    line-height: 1.45;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-smoothing: antialiased; 
+}
+
+.wrapper{
+    overflow: hidden;
+    position: relative;
+}
+
+.content{
+    width: 100%;   
+}
+
+.button{
+    border-radius: 5px;
+    background-color: #e45128; 
+
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+
+    padding: 8px 17px;
+    height: 35px;
+}
+
+.button:hover{
+    background-color: #e48c28; 
+    transition: .4s;
+}
+

@@ -1,7 +1,34 @@
-.header {
-  background: black; }
+@import url('./layout/normalize.css');
+@import url('./layout/fonts.css');
+@import url('./layout/base.css');
 
-body {
-  background: #ccc; }
+@import url('./blocks/animation.css');
 
-/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJsb2Nrcy9oZWFkZXIuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFpQixFQUNwQjs7QUFDRDtFQUNJLGlCQUFnQixFQUNuQiIsImZpbGUiOiJtYWluLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5oZWFkZXJ7XHJcbiAgICBiYWNrZ3JvdW5kOiBibGFjaztcclxufVxyXG5ib2R5e1xyXG4gICAgYmFja2dyb3VuZDogI2NjYztcclxufSJdfQ== */
+@import url('./blocks/sections.css');
+
+@import url('./blocks/first-screen.css');
+@import url('./blocks/we.css');
+@import url('./blocks/burgers.css');
+@import url('./blocks/team.css');
+@import url('./blocks/menu.css');
+@import url('./blocks/reviews.css');
+@import url('./blocks/howwork.css');
+@import url('./blocks/form.css');
+@import url('./blocks/contacts.css');
+
+@import url('./blocks/header.css');
+@import url('./blocks/logo.css');
+@import url('./blocks/navigation.css');
+@import url('./blocks/content.css');
+@import url('./blocks/arrow-scroll.css');
+
+@import url('./blocks/advantage.css');
+
+@import url('./blocks/button-navigation.css');
+
+@import url('./blocks/videoplayer.css');
+
+@import url('./blocks/map.css');
+@import url('./blocks/footer.css');
+@import url('./blocks/socials.css');
+@import url('./blocks/copyright.css');

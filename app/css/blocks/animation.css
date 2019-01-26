@@ -1,0 +1,13 @@
+@keyframes Up-Down {
+    from {
+        transform: translateY(0px);
+    }
+
+    30%{
+        transform: translateY(10px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }    
+  }

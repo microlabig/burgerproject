@@ -1,0 +1,66 @@
+/* first-screen */
+.sections--first-screen{
+    position: relative;    
+}
+.sections--first-screen .sections__block{
+    max-width: 960px;
+}
+
+.sections--first-screen .sections__title{
+    margin-bottom: 50px;
+}
+
+.sections__content{
+    flex:1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sections__img-block{
+    position: relative;
+
+    width: 417px;
+    height: 424px;
+    
+    overflow: hidden;
+    flex-shrink: 0;
+
+    margin-right: 11px;
+}
+
+.sections__img-block:before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    background-image: url('../../img/first-screen/-e-drops.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top 70px;
+}
+
+.sections__image{
+    max-width: 100%;
+    max-height: 100%;
+    
+    object-fit: contain;
+}
+
+.sections__slogan{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: min-content;
+}
+
+.sections__slogan-title2{
+    color:#fff;
+    font-size: 65px;
+    line-height: 60px;
+}

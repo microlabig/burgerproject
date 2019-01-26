@@ -1,0 +1,229 @@
+.burgers__slider{
+    display: flex;    
+    align-items: center;
+
+    flex: 1;
+
+    max-width: 1010px;
+    margin: 0 auto;
+}
+
+.burgers__description,
+.burgers__images-block {
+    position: relative;
+
+    /*flex-basis: 30%;*/
+}
+
+.burgers__images-block {
+    display: flex;
+    flex-direction: column;
+}
+
+/* auto-scroll */
+.burgers__auto-scroll{
+    display: inline-block;
+    flex-shrink: 0;
+    
+    width: 15px;
+    height: 26px;
+
+    transform: rotate(90deg);
+
+    overflow: hidden;
+    cursor: pointer;
+
+    margin-right: 20px;
+}
+
+.burgers__auto-scroll-image,
+.burgers__composition-image,
+.burgers__chr-image,
+.burgers__calories-image,
+.burgers__image {
+    max-width: 100%;
+    max-height: 100%;
+    
+    object-fit: contain;
+}
+
+.burgers__auto-scroll--right{
+    transform: rotate(-90deg);
+
+    margin-left: 39px;
+}
+
+.burgers__composition-block{
+    position: absolute;
+    bottom: 45px;
+
+    display: flex;
+}
+
+/* composition */
+
+.burgers__composition-btn-block{
+    width: 90px;
+    height: 90px;
+    border-radius: 5px;
+    background-color: #ff9933;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+.burgers__composition-btn-block:hover{
+    background-color:#e35028;
+    transition: .4s;
+}
+
+.burgers__composition-btn-block:hover + .burgers__charackters-block{
+    opacity: 1;
+    transition: .4s;
+}
+
+.burgers__composition-img{
+    position: relative;
+
+    width: 46px;
+    height: 44px;
+
+    overflow: hidden;
+}
+
+.burgers__composition-text{
+    font-family: 'gagalin';
+    text-transform: uppercase;
+    font-size: 14px;
+    color:white;
+}
+
+.burgers__img-block{
+    width: 505px;
+    height: 329px;
+    overflow: hidden;
+}
+
+.burgers__calories-block{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 60px;
+}
+
+.burgers__calories-count,
+.burgers__calories-text{
+    font-family: 'gagalin';    
+    color:rgba(255, 255, 255, 0.5);
+}
+
+.burgers__calories-count{
+    position: absolute;
+    font-size: 20px;
+}
+
+.burgers__calories-text{
+    font-size: 14px;
+}
+
+/* burgers__charackters-block */
+
+.burgers__charackters-block{    
+    width: 270px; 
+    
+    border-radius: 5px;
+    background-color: rgba(255,255,255,.9);
+
+    opacity: 0;
+}
+
+.burgers__charackters-list{
+    padding:28px 22px;
+}
+
+.burgers__charackters-item{
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.burgers__charackters-item:last-child{
+    margin-bottom: 0;
+}
+
+.burgers__chr-img-block{
+    width: 48px;
+    height: 43px;
+    
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    margin-right: 20px;
+}
+
+
+.burgers__chr-description{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.burgers__chr-text,
+.burgers__chr-value{
+    font-size: 14px;    
+    color: #333333;
+}
+
+.burgers__chr-text{
+    font-weight: 500;
+}
+
+.burgers__chr-value{
+    font-weight: 400;
+}
+
+
+
+/* burgers__description */
+
+.burgers__description{
+    color: white;
+}
+
+.burgers__description .sections__title{
+    margin-bottom: 56px;
+}
+
+.burgers__text{
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+.burgers__price-block{
+    display: flex;
+    align-items: baseline;    
+}
+
+.burgers__price-text{
+    font-family: 'gagalin';
+    font-size: 72px;    
+    color:#e35028;
+
+    margin-right: 29px;
+}
+
+.burgers__price-val{
+    font-size: 30px;
+}
+
