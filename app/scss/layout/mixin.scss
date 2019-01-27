@@ -1,3 +1,35 @@
+//центрирование элементов
+@mixin centered($pos: absolute, $axis: 'both') {
+    position: $pos;
+    @if ($axis=='both') {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @if ($axis=='x') {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @if ($axis=='y') {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @if ($axis=='max') {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    @if ($axis=='fullX') {
+        right: 0;
+        left: 0;
+    }
+    @if ($axis=='fullY') {
+        top: 0;
+        bottom: 0;
+    }
+}
+
 //  управление размером и положением загружаемых картинок через background-image
 @mixin bg($size: cover, $pos: center center) {
     background-size: $size;
@@ -9,59 +41,32 @@
 @mixin socialimg ($width: 20px, $height: 20px) {
     content: "";
     display: inline-block;
-    
-    @include bg(cover, center center); 
-
+    @include bg(cover, center center);
     width: $width;
     height: $height;
-
     filter: brightness(0.4);
 }
 
 // ограничения высоты и ширины img относительно родителя
 @mixin imgsize($object-fit: contain) {
     max-width: 100%;
-    max-height: 100%;    
+    max-height: 100%;
     object-fit: $object-fit;
 }
 
 // рисование окружности, круга
 @mixin circle($size, $bordersize:0px, $color: transparent, $bgcolor: transparent) {
     width: $size;
-    height: $size; 
-    border: $bordersize solid $color; 
-    border-radius: 50%; 
-    background-color: $bgcolor;  
+    height: $size;
+    border: $bordersize solid $color;
+    border-radius: 50%;
+    background-color: $bgcolor;
 }
-
-//центрирование элементов
-@mixin centered($pos: absolute, $axis: 'both') {
-    position: $pos;
-    @if ($axis == 'both') {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    } 
-    @if ($axis == 'x') {
-        left: 50%;
-        transform: translateX(-50%);
-    } 
-    @if ($axis == 'y') {
-        top: 50%;
-        transform: translateY(-50%);
-    } 
-    @if ($axis == 'max') {
-        top: 0;
-        right: 0;        
-        bottom: 0;
-        left: 0;
-    } 
-    @if ($axis == 'fullX') {
-        right: 0;  
-        left: 0;
-    } 
-    @if ($axis == 'fullY') {
-        top: 0;       
-        bottom: 0;
-    } 
+// для фиксированных точек
+@mixin circle_fixed {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    @include circle(14px, 1px, transparent, transparent);
+    @include centered('both');
 }

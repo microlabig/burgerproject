@@ -1,38 +1,45 @@
-.button-nav{
+.button-nav {
     position: fixed;
-
     top: 90px;
     right: 50px;
-
     z-index: 10;
 }
 
-.button-nav__dot{
+.button-nav__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-nav__item {
+    cursor: pointer;
     display: inline-block;
     position: relative;
 
-    @include circle(6px, 1px, transparent, $white);        
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+
+    margin-bottom: 15px; 
+
+    &:last-child {
+        margin-bottom: 0; 
+    }
 
     &:after {
-        content: "";
-        display: inline-block;         
-         
-        @include circle(16px, 1px, transparent, transparent);    
-        
-        @include centered(absolute, 'both');
-    
+        @include circle_fixed;        
+    }
+    &:hover:after {
+        border-color: $white;
         transition: border-color .4s;
     }
 }
 
-.button-nav__item {
-    margin-bottom: 1px; 
-    &:last-child {
-        margin-bottom: 0; 
-    }
+.button-nav__dot {
+    display: inline-block;
+    @include circle(6px, 1px, transparent, $white);
 }
 
-.button-nav__item:hover .button-nav__dot:after,
-.button-nav__item--active .button-nav__dot:after{
+.button-nav__item--active:after {
+    @include circle_fixed;
     border-color: $white;
 }
