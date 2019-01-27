@@ -25,7 +25,7 @@
 }
 
 .team__title{
-    color:#f9b43b;
+    color:$yellow;
 
     margin-bottom: 45px;
 }
@@ -39,7 +39,7 @@
 }
 
 .team__item--checked .team__name{
-    color:#f9b43b;
+    color:$yellow;
 }
 
 .team__name-block{
@@ -50,7 +50,7 @@
 .team__name{
     text-transform: uppercase;
     font-size: 14px; 
-    color: white;   
+    color: $white;   
 
     margin-bottom: 17px;   
 
@@ -65,7 +65,7 @@
     height: 0;
 
     border: 10px solid transparent;
-    border-top-color: #f9b43b;
+    border-top-color: $yellow;
 
     border-top-width:7px;
     border-right-width:5px;
@@ -105,16 +105,16 @@
 }
 
 .team__text{    
-    color:white;    
+    color:$white;    
     font-style: 14px;
 }
 
 .team__profession{
-    font-weight: 700;
+    font-weight: $bold;
 
     margin-bottom: 23px;
 }
 
 .team__about{
-    font-weight: 400;
+    font-weight: $light;
 }

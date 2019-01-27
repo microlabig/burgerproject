@@ -4,7 +4,7 @@
 
 /*
 html{
-    font-size: 72px;
+    font-size: 14px;
 }
 */
 
@@ -62,12 +62,12 @@ h3 {
 
 .button{
     border-radius: 5px;
-    background-color: #e45128; 
+    background-color: $red; 
 
     text-decoration: none;
     text-transform: uppercase;
-    color: white;
-    font-weight: 500;
+    color: $white;
+    font-weight: $medium;
     font-size: 13px;
 
     padding: 8px 17px;
@@ -75,7 +75,7 @@ h3 {
 }
 
 .button:hover{
-    background-color: #e48c28; 
+    background-color: $orange; 
     transition: .4s;
 }
 

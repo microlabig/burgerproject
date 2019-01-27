@@ -15,7 +15,7 @@
 
     align-content: stretch;
 
-    color: white;
+    color: $white;
 
     flex-basis: calc(100%/4);
 
@@ -86,9 +86,9 @@
 }
 
 .button--more{
-    background-color: #2f3234;
+    background-color: $gray;
 }
 
 .button--more:hover{
-    background-color: #1f2122;
+    background-color: $dark-gray;
 }

@@ -1,3 +1,37 @@
-@import "fonts";
 
-@import "blocks/header";
+// Настройки
+@import './layout/variables';
+@import './layout/normalize';
+@import './layout/fonts';
+@import './layout/base';
+
+//Проект
+@import './blocks/animation';
+
+@import './blocks/sections';
+
+@import './blocks/first-screen';
+@import './blocks/we';
+@import './blocks/burgers';
+@import './blocks/team';
+@import './blocks/menu';
+@import './blocks/reviews';
+@import './blocks/howwork';
+@import './blocks/form';
+@import './blocks/contacts';
+
+@import './blocks/header';
+@import './blocks/logo';
+@import './blocks/navigation';
+@import './blocks/arrow-scroll';
+
+@import './blocks/advantage';
+
+@import './blocks/button-navigation';
+
+@import './blocks/videoplayer';
+
+@import './blocks/map';
+@import './blocks/footer';
+@import './blocks/socials';
+@import './blocks/copyright';

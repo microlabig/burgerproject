@@ -22,7 +22,7 @@
     display: inline-block;
     vertical-align: middle;
 
-    color: #fff;
+    color: $white;
 
     margin-left: 18px;
     margin-right: 18px;    
@@ -40,9 +40,9 @@
     text-decoration: none;
     text-transform: uppercase;
     
-    font-weight: 500;
+    font-weight: $medium;
     font-size: 13px;
-    color: #fff;
+    color: $white;
 }
 
 .navigation__item:hover .navigation__text{

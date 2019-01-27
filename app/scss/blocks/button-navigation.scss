@@ -17,7 +17,7 @@
 
     width: 6px;
     height: 6px;
-    background-color: #fff;
+    background-color: $white;
     border-radius: 100%;
 
     margin-bottom: 16px;
@@ -43,5 +43,5 @@
 
 .button-nav__item:hover .button-nav__dot:after,
 .button-nav__item--active .button-nav__dot:after{
-    border-color: #fff;
+    border-color: $white;
 }

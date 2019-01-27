@@ -1,6 +1,8 @@
 .header{
-    background: black;
-}
-body{
-    background: #ccc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;    
+
+    margin-top: 13px;
 }

@@ -1,9 +1,9 @@
 /* copyright */
 
 .footer__copyright-street{
-    color:white;
+    color:$white;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: $light;
 
     margin-bottom: 12px;
 }
@@ -11,8 +11,8 @@
 .footer__copyright-number{
     text-decoration: none;
     font-size: 14px;
-    font-weight: 700;
-    color: #e45028;
+    font-weight: $bold;
+    color: $red;
 }
 
 .footer__copyright-number:before{
