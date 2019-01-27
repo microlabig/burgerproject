@@ -1,4 +1,4 @@
-//  
+//  управление размером и положением загружаемых картинок через background-image
 @mixin bg($size: cover, $pos: center center) {
     background-size: $size;
     background-position: $pos;
@@ -25,3 +25,11 @@
     object-fit: $object-fit;
 }
 
+// рисование окружности, круга
+@mixin circle($size, $bordersize:0px, $color: transparent, $bgcolor: transparent) {
+    width: $size;
+    height: $size; 
+    border: $bordersize solid $color; 
+    border-radius: $size/2; 
+    background-color: $bgcolor;  
+}

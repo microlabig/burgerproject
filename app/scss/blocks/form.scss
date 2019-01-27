@@ -130,12 +130,7 @@
     top:50%;
     transform: translateY(-50%);
 
-    width: 15px;
-    height: 15px;
-
-    border: 1px solid transparent;  
-    background-color: $white;  
-    border-radius: 50%;
+    @include circle(15px, 1px, transparent, $white);
 
     margin-right:5px;
 
@@ -189,10 +184,7 @@
 
     width: 15px;
     height: 15px;
-/*
-    top:50%;
-    transform: translateY(-50%);
-*/
+
     border: 1px solid transparent;  
     background-color: $white; 
 

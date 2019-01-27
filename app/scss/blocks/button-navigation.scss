@@ -11,23 +11,16 @@
 .button-nav__dot{
     position: relative;
 
-    width: 6px;
-    height: 6px;
-    background-color: $white;
-    border-radius: 100%;
+    @include circle(6px, 1px, transparent, $white);
 
     margin-bottom: 16px;
 
     &:after {
         content: "";
         display: inline-block;  
-        position: absolute;
-        
-        width: 16px;
-        height: 16px; 
-    
-        border: 1px solid transparent; 
-        border-radius: 50%;   
+        position: absolute;        
+         
+        @include circle(16px, 1px, transparent, transparent);
     
         left:50%;
         top:50%;
