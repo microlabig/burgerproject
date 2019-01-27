@@ -1,4 +1,4 @@
-.sections--form {
+.form {
     & .container {
         display: flex;
         flex-direction: column;
@@ -11,7 +11,7 @@
     }
 }
 
-.form {
+.formwrapper {
     display: flex;
 }
 

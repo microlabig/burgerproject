@@ -1,6 +1,6 @@
 /* hero */
 
-.sections--hero {
+.hero {
     position: relative;
     
     & .container {
@@ -8,7 +8,7 @@
     }
 }
 
-.sections--hero .sections__title {
+.hero .sections__title {
     margin-bottom: 30px;
 }
 
