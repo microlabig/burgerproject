@@ -1,64 +1,60 @@
-/* first-screen */
-.sections--first-screen{
-    position: relative;    
-}
-.sections--first-screen .sections__block{
-    max-width: 940px;    
+/* hero */
+
+.sections--hero {
+    position: relative;
+    
+    & .container {
+        max-width: 940px;
+    }
 }
 
-.sections--first-screen .sections__title{
+.sections--hero .sections__title {
     margin-bottom: 30px;
 }
 
-.sections__content{
-    flex:1;
-
+.sections__content {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.sections__img-block{
+.section__burger {
     position: relative;
     display: inline-block;
-
     width: 417px;
     height: 424px;
-    
     overflow: hidden;
     flex-shrink: 0;
-
     margin-right: 11px;
-
-    &:before{
+    &:before {
         content: "";
         display: inline-block;
         position: absolute;
-    
         min-width: 100%;
         min-height: 100%;
-    
-        background-image: url('../img/first-screen/-e-drops.png');       
-        @include bg(contain, center top 70px);
+        background-image: url('../img/hero/-e-drops.png');
+        @include bg(contain,
+        center top 70px);
     }
 }
 
-.sections__image{
-    @include imgsize(contain);
+.sections__burger-img {
+    //@include imgsize(contain);
+    max-width: 100%;
+    max-height: 100%;
 }
 
-.sections__slogan{
+.sections__slogan {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     width: min-content;
-
-    transform: translateY(32px);
+    margin-top:32px;
 }
 
-.sections__slogan-title2{
-    color:$white;
+.sections__slogan-title2 {
+    color: $white;
     font-size: 65px;
     line-height: 60px;
 }

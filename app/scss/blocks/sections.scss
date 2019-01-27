@@ -13,8 +13,8 @@
 }
 
 /* sections bg */
-.sections--first-screen{  
-    background: url('../img/first-screen/bg.jpg') center center / cover no-repeat;    
+.sections--hero{  
+    background: url('../img/hero/bg.jpg') center center / cover no-repeat;    
 }
 .sections--we{
     background: url('../img/we/bg.jpg') center center / cover no-repeat;
@@ -42,7 +42,7 @@
 }
 
 
-.sections__block{
+.container{
     width: 100%;
     height: 100%;
     /*max-width: 960px; */

@@ -1,12 +1,14 @@
+.sections--we {
+    & .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-.sections--we .sections__block{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        max-width: 940px;
+    }
+    
+    & .sections__title {
+        margin-bottom: 56px;
+    }
 }
-
-.sections--we .sections__title{
-    margin-bottom: 56px;
-}
-

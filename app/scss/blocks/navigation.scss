@@ -16,6 +16,12 @@
     align-items: center;
     flex-wrap: nowrap;
 
+    margin-right: 15px;
+
+    &:last-child{
+        margin-right: 0;
+    }
+
     &:hover .navigation__text {
         text-decoration: underline;
     }
@@ -25,8 +31,7 @@
         display: inline-block;
         vertical-align: middle;
         color: $white;
-        margin-left: 15px;
-        margin-right: 15px;        
+        margin-left: 15px;                
     }
 
     &:last-child:after {

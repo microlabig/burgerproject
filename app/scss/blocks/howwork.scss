@@ -1,11 +1,12 @@
-.sections--howwork .sections__block{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.sections--howwork .sections__title{
-    font-size: 61px;
-    margin-bottom: 37px;
+.sections--howwork {
+    & .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    & .sections__title {
+        font-size: 61px;
+        margin-bottom: 37px;
+    }
 }

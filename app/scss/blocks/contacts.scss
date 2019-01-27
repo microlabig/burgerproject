@@ -1,7 +1,9 @@
-.sections--contacts .sections__block{
-    display: flex;
-    flex-direction: column;
-    
-    width: 100%;
+.sections--contacts {
+    & .container {
+        display: flex;
+        flex-direction: column;
+        
+        width: 100%;
+    }
 }
 

@@ -7,14 +7,20 @@
     //margin-right: 69px;    
 }
 
-.logo__img-block{
+.logo__link{    
+    display: inline-block;
+    /*
     width: 92px;
     height: 69px;
     overflow: hidden;
+    */
 }
 
 .logo__image{
-    @include imgsize(contain);  
+    width: 92px;
+    height: 69px;
+    overflow: hidden;
+    //@include imgsize(contain);  
 }
 
 .logo__title{

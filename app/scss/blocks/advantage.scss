@@ -1,4 +1,4 @@
-.advantage__block{
+.advantage{
     text-align: center;
 }
 
@@ -7,7 +7,8 @@
 }
 
 .advantage__item{
-    width: 300px;
+    //width: 300px;
+    flex:1;
 
     margin-right: 20px;
     
@@ -16,18 +17,15 @@
     }
 }
 
-.advantage__img-block{
-    width: 100px;
+.advantage__image{
     height: 90px;
 
     overflow: hidden;
 
-    margin: 0 auto;
-
     margin-bottom: 21px;
 }
 
-.advantage__image{
+.advantage__image-icon{
     @include imgsize(contain);
 }
 
