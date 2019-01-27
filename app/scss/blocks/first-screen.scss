@@ -3,11 +3,11 @@
     position: relative;    
 }
 .sections--first-screen .sections__block{
-    max-width: 960px;
+    max-width: 940px;    
 }
 
 .sections--first-screen .sections__title{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .sections__content{
@@ -53,6 +53,8 @@
     justify-content: center;
 
     width: min-content;
+
+    transform: translateY(32px);
 }
 
 .sections__slogan-title2{

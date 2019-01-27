@@ -80,6 +80,6 @@
     background-color: $gray;
 
     &:hover {
-        background-color: $dark-gray;
+        background-color: darken($gray, 10%);
     }
 }
