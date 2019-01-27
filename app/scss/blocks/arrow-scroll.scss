@@ -1,10 +1,15 @@
 .arrow-scroll{
-    text-align: center;
+    margin: 0 auto;
     cursor: pointer;
+
+    width: 29px;
+    height: 15px;
 
     margin-bottom: 30px;
 }
 
 .arrow-scroll__img{
+    @include imgsize(contain);
+
     animation: Up-Down 1s infinite;
 }

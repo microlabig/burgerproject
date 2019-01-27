@@ -25,8 +25,8 @@
     display: inline-block;
     flex-shrink: 0;
     
-    width: 15px;
-    height: 26px;
+    width: 29px;
+    height: 15px;
 
     transform: rotate(90deg);
 
@@ -212,14 +212,19 @@
 }
 
 .burgers__price-text{
+    display: inline-block;
+
     font-family: 'gagalin';
     font-size: $titlefontsize;    
     color: $light-red;
 
-    margin-right: 29px;
+    margin-right: 3px;
 }
 
 .burgers__price-val{
+    @extend .burgers__price-text;
     font-size: $basefontsize+16px; //30px;
+
+    margin-right: 24px;
 }
 
