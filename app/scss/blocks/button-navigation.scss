@@ -17,14 +17,11 @@
 
     &:after {
         content: "";
-        display: inline-block;  
-        position: absolute;        
+        display: inline-block;         
          
-        @include circle(16px, 1px, transparent, transparent);
-    
-        left:50%;
-        top:50%;
-        transform: translate(-50%,-50%);
+        @include circle(16px, 1px, transparent, transparent);    
+        
+        @include centered(absolute, 'both');
     
         transition: border-color .4s;
     }

@@ -38,10 +38,11 @@
         $width: 20px;
         $height: 20px;
 
-        @if $social == vk {
+        @if ($social == vk) {
             $width: 23px;
             $height: 13px;
-        } @elseif $social == tw {
+        } 
+        @if ($social == tw) {
             $width: 20px;
             $height: 16px;
         } 
