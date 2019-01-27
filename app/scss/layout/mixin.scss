@@ -37,7 +37,6 @@
 //центрирование элементов
 @mixin centered($pos: absolute, $axis: 'both') {
     position: $pos;
-
     @if ($axis == 'both') {
         top: 50%;
         left: 50%;
