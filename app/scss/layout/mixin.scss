@@ -1,21 +1,27 @@
+//  
+@mixin bg($size: cover, $pos: center center) {
+    background-size: $size;
+    background-position: $pos;
+    background-repeat: no-repeat;
+}
+
 // иконки social в footer
 @mixin socialimg ($width: 20px, $height: 20px) {
     content: "";
     display: inline-block;
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
     
+    @include bg(cover, center center); 
+
     width: $width;
     height: $height;
 
     filter: brightness(0.4);
 }
 
-// для ограничения высоты и ширины img относительно родителя
+// ограничения высоты и ширины img относительно родителя
 @mixin imgsize($object-fit: contain) {
     max-width: 100%;
     max-height: 100%;    
     object-fit: $object-fit;
 }
+

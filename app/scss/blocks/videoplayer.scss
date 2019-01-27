@@ -18,9 +18,8 @@
         transform: translate(-50%,-50%);
     
         background-image: url('../../img/howwork/play_white.png');
-        background-repeat: no-repeat;
-        background-size: initial; 
-        background-position: center center;
+        @include bg(initial, center center);
+
         cursor: pointer;
     }
 }
@@ -54,9 +53,8 @@
 }
 
 .videoplayer__btn{   
-    background-repeat: no-repeat;
-    background-size: initial; 
-    background-position: center center;
+    @include bg(initial, center center);
+    
     cursor: pointer;
     z-index: 1;
 }

@@ -37,10 +37,8 @@
         min-width: 100%;
         min-height: 100%;
     
-        background-image: url('../../img/first-screen/-e-drops.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center top 70px;
+        background-image: url('../../img/first-screen/-e-drops.png');       
+        @include bg(contain, center top 70px);
     }
 }
 

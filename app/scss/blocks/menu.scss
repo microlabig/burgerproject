@@ -61,10 +61,7 @@
 }
 
 .menu__item-title-block{
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-
+    @include bg(cover, center center);
     width: 80px;
     height:100%;
 

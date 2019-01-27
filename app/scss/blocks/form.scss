@@ -206,9 +206,7 @@
         position: absolute;
         
         background-image: url('../../img/form/check.png'); 
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
+        @include bg(contain, center center);
     
         width: 0;
         height: 0;
