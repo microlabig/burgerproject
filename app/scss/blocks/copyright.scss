@@ -2,7 +2,7 @@
 
 .footer__copyright-street{
     color:$white;
-    font-size: 14px;
+    font-size: inherit;
     font-weight: $light;
 
     margin-bottom: 12px;
@@ -10,7 +10,7 @@
 
 .footer__copyright-number{
     text-decoration: none;
-    font-size: 14px;
+    font-size: inherit;
     font-weight: $bold;
     color: $red;
 }

@@ -21,24 +21,24 @@
     border-radius: 100%;
 
     margin-bottom: 16px;
-}
 
-.button-nav__dot:after{
-    content: "";
-    display: inline-block;  
-    position: absolute;
+    &:after {
+        content: "";
+        display: inline-block;  
+        position: absolute;
+        
+        width: 16px;
+        height: 16px; 
     
-    width: 16px;
-    height: 16px; 
-
-    border: 1px solid transparent; 
-    border-radius: 50%;   
-
-    left:50%;
-    top:50%;
-    transform: translate(-50%,-50%);
-
-    transition: border-color .4s;
+        border: 1px solid transparent; 
+        border-radius: 50%;   
+    
+        left:50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+    
+        transition: border-color .4s;
+    }
 }
 
 .button-nav__item:hover .button-nav__dot:after,

@@ -8,9 +8,15 @@
 
 .footer__social-item{
     margin-right: 20px;
-}
-.footer__social-item:last-child{
-    margin-right: 0;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover .footer__social-img:before{
+        filter: brightness(1);
+        transition: filter .5s;
+    }    
 }
 
 .footer__social-text{
@@ -85,7 +91,3 @@
     filter: brightness(0.4);
 }
 
-.footer__social-item:hover .footer__social-img:before{
-    filter: brightness(1);
-    transition: filter .5s;
-}

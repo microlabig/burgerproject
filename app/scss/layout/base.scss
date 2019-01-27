@@ -2,11 +2,9 @@
     box-sizing: border-box; 
 }
 
-/*
-html{
-    font-size: 14px;
+html {
+    font-size: $basefontsize;
 }
-*/
 
 body {
     font-family: 'ubuntu', Helvetica, sans-serif;
@@ -21,14 +19,13 @@ body {
     height: 100%;
 }
 
-
 ul, 
 li {
     margin:0;
     padding:0;
 }
 
-h1,h2,h3,h4{
+h1,h2,h3,h4 {
     margin: 0;
 }
 
@@ -39,7 +36,7 @@ h1,h2,h4 {
     -webkit-font-smoothing: antialiased;
     -moz-osx-smoothing: antialiased; 
 
-    font-size: 72px;
+    font-size: $titlefontsize;
     text-transform: uppercase;
 }
 
@@ -51,16 +48,16 @@ h3 {
     -moz-osx-smoothing: antialiased; 
 }
 
-.wrapper{
+.wrapper {
     overflow: hidden;
     position: relative;
 }
 
-.content{
+.content {
     width: 100%;   
 }
 
-.button{
+.button {
     border-radius: 5px;
     background-color: $red; 
 
@@ -72,10 +69,9 @@ h3 {
 
     padding: 8px 17px;
     height: 35px;
-}
 
-.button:hover{
-    background-color: $orange; 
-    transition: .4s;
+    &:hover {
+        background-color: $orange; 
+        transition: .4s;
+    }
 }
-
