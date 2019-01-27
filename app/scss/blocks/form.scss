@@ -184,7 +184,7 @@
         display: inline-block;
         position: absolute;
         
-        background-image: url('../../img/form/check.png'); 
+        background-image: url('../img/form/check.png'); 
         @include bg(contain, center center);
     
         width: 0;

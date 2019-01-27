@@ -17,7 +17,7 @@
         top: 50%;
         transform: translate(-50%,-50%);
     
-        background-image: url('../../img/howwork/play_white.png');
+        background-image: url('../img/howwork/play_white.png');
         @include bg(initial, center center);
 
         cursor: pointer;
@@ -60,28 +60,28 @@
 }
 
 .play{
-    background-image: url('../../img/howwork/pleer/play.png');
+    background-image: url('../img/howwork/pleer/play.png');
     width: 16px;
     height: 22px;
 }
 .shkala{
-    background-image: url('../../img/howwork/pleer/shkala.png');
+    background-image: url('../img/howwork/pleer/shkala.png');
     width: 444px;
     height: 4px;
 }
 
 .videoplayer__btn-regulyator{
-    background-image: url('../../img/howwork/pleer/regulyator.png');
+    background-image: url('../img/howwork/pleer/regulyator.png');
     width: 12px;
     height: 13px;
 }
 .volume{
-    background-image: url('../../img/howwork/pleer/volume.png');
+    background-image: url('../img/howwork/pleer/volume.png');
     width: 18px;
     height: 22px;
 }
 .sound-meter{
-    background-image: url('../../img/howwork/pleer/sound_meter.png');
+    background-image: url('../img/howwork/pleer/sound_meter.png');
     width: 58px;
     height: 4px;
 }

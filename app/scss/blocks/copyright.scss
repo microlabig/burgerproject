@@ -18,7 +18,7 @@
         content: "";
         display: inline-block;
     
-        background-image: url('../../img/contacts/phone.svg');
+        background-image: url('../img/contacts/phone.svg');
         @include bg(cover, center center);
         width: 12px;
         height: 11px;
