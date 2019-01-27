@@ -1,7 +1,6 @@
 /* socials */
 
 .footer__social-list{
-    list-style: none;
     display: flex;
     justify-content: flex-end;
 }
@@ -34,60 +33,20 @@
     flex-wrap: nowrap;
 }
 
-.footer__social-im--vk:before{
-    content: "";
-    display: inline-block;
+@each $social in (vk, fb, instagram, tw) {
+    .footer__social-im--#{$social}:before{
+        $width: 20px;
+        $height: 20px;
 
-    background-image: url('../../img/contacts/vk.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    
-    width: 23px;
-    height: 13px;
+        @if $social == vk {
+            $width: 23px;
+            $height: 13px;
+        } @elseif $social == tw {
+            $width: 20px;
+            $height: 16px;
+        } 
 
-    filter: brightness(0.4);
+        @include socialimg($width, $height);
+        background-image: url('../../img/contacts/#{$social}.svg'); 
+    }
 }
-.footer__social-im--fb:before{
-    content: "";
-    display: inline-block;
-
-    background-image: url('../../img/contacts/fb.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    
-    width: 20px;
-    height: 20px;
-
-    filter: brightness(0.4);
-}
-.footer__social-im--instagram:before{
-    content: "";
-    display: inline-block;
-
-    background-image: url('../../img/contacts/inst.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    
-    width: 20px;
-    height: 20px;
-
-    filter: brightness(0.4);
-}
-.footer__social-im--tw:before{
-    content: "";
-    display: inline-block;
-
-    background-image: url('../../img/contacts/twitter.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    
-    width: 20px;
-    height: 16px;
-
-    filter: brightness(0.4);
-}
-

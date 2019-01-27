@@ -28,20 +28,20 @@
     flex-shrink: 0;
 
     margin-right: 11px;
-}
 
-.sections__img-block:before{
-    content: "";
-    display: inline-block;
-    position: absolute;
-
-    min-width: 100%;
-    min-height: 100%;
-
-    background-image: url('../../img/first-screen/-e-drops.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center top 70px;
+    &:before{
+        content: "";
+        display: inline-block;
+        position: absolute;
+    
+        min-width: 100%;
+        min-height: 100%;
+    
+        background-image: url('../../img/first-screen/-e-drops.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center top 70px;
+    }
 }
 
 .sections__image{

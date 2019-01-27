@@ -1,0 +1,15 @@
+// иконки social в footer
+@mixin socialimg ($width: 20px, $height: 20px) {
+    content: "";
+    display: inline-block;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+    width: $width;
+    height: $height;
+
+    filter: brightness(0.4);
+}
+

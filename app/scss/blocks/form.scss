@@ -76,7 +76,6 @@
 }
 
 .form__row--list{
-    list-style: none;
     margin-bottom: 0;
 
     .form__elem{        
@@ -141,32 +140,31 @@
     margin-right:5px;
 
     transition: border .5s;
-}
 
-.form__radio-fake:after{
-    content: "";
-    display: inline-block;
-    position: absolute;
-
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background-color:$light-red;    
+    &:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
     
-    top: 50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-
-    transition: .4s;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color:$light-red;    
+        
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    
+        transition: .4s;
+    }
 }
 
 .form__radio-input:checked + .form__radio-fake{
     border: 1px solid $light-red;
-}
-
-.form__radio-input:checked + .form__radio-fake:after{
-    width: 7px;
-    height: 7px;
+    &:after {
+        width: 7px;
+        height: 7px;
+    }
 }
 
 /* Checkbox style */
@@ -201,34 +199,35 @@
     margin-right:5px;
 
     transition: border .5s;
+
+    &:after{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        
+        background-image: url('../../img/form/check.png'); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    
+        width: 0;
+        height: 0;
+        
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    
+        transition: .4s;
+    }
 }
 
-.form__checkbox-fake:after{
-    content: "";
-    display: inline-block;
-    position: absolute;
-    
-    background-image: url('../../img/form/check.png'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-
-    width: 0;
-    height: 0;
-    
-    top: 50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-
-    transition: .4s;
-}
-
-.form__checkbox-input:checked+.form__checkbox-fake{
+.form__checkbox-input:checked + .form__checkbox-fake{
     border: 1px solid $light-red;
-}
-.form__checkbox-input:checked+.form__checkbox-fake:after{   
-    width: 7px;
-    height: 7px;
+
+    &:after {   
+        width: 7px;
+        height: 7px;
+    }
 }
 
 /* Button style */

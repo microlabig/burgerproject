@@ -4,30 +4,25 @@
     overflow: hidden;
 
     position: relative;
-/*
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    */
-}
-
-.videoplayer__img-block:after{
-    content: "";
-    display: inline-block;
-    position: absolute;
-
-    width: 82px;
-    height: 118px;
-
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-
-    background-image: url('../../img/howwork/play_white.png');
-    background-repeat: no-repeat;
-    background-size: initial; 
-    background-position: center center;
-    cursor: pointer;
+    
+    &:after{
+        content: "";
+        display: inline-block;
+        position: absolute;
+    
+        width: 82px;
+        height: 118px;
+    
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    
+        background-image: url('../../img/howwork/play_white.png');
+        background-repeat: no-repeat;
+        background-size: initial; 
+        background-position: center center;
+        cursor: pointer;
+    }
 }
 
 .videoplayer__image{
@@ -46,18 +41,18 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
 
-.videoplayer__btn-block:before{
-    content: "";
-    display: inline-block;
-    position: absolute;
-
-    min-width: 100%;
-    min-height: 100%;
-    top: 0;
-
-    background-color: $light-gray;
+    &:before{
+        content: "";
+        display: inline-block;
+        position: absolute;
+    
+        min-width: 100%;
+        min-height: 100%;
+        top: 0;
+    
+        background-color: $light-gray;
+    }
 }
 
 .videoplayer__btn{   

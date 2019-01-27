@@ -13,18 +13,18 @@
     font-size: inherit;
     font-weight: $bold;
     color: $red;
-}
 
-.footer__copyright-number:before{
-    content: "";
-    display: inline-block;
-
-    background-image: url('../../img/contacts/phone.svg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 12px;
-    height: 11px;
-
-    margin-right: 6px;
+    &:before{
+        content: "";
+        display: inline-block;
+    
+        background-image: url('../../img/contacts/phone.svg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 12px;
+        height: 11px;
+    
+        margin-right: 6px;
+    }
 }
