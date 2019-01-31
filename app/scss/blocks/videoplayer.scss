@@ -1,99 +1,86 @@
-.videoplayer__img-block{
-    width: 660px;
-    height: 370px;
-    overflow: hidden;
-
+.videoplayer__preview{
     position: relative;
-    
-    &:after{
-        content: "";
-        display: inline-block;
-        position: absolute;
-    
-        width: 82px;
-        height: 118px;
-    
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-    
-        background-image: url('../img/howwork/play_white.png');
-        @include bg(initial, center center);
-
-        cursor: pointer;
-    }
 }
 
-.videoplayer__image{
+.videoplayer__img-block {
+    width: 660px;
+    height: 370px;
+    overflow: hidden;  
+}
+
+.videoplayer__play {
+    position: absolute;
+    cursor: pointer;  
+
+    width: 82px;
+    height: 118px;
+
+    @include centered(absolute, 'both');
+    fill: $white;
+    opacity: 0.9;
+}
+
+.videoplayer__image {
     @include imgsize(contain);
 }
 
 /* player */
 
-.videoplayer__btn-block{
-    width: 660px;
-    height: 35px;    
+.videoplayer__button {    
     position: relative;
-
+    
     display: flex;
     justify-content: space-around;
     align-items: center;
 
-    &:before{
-        content: "";
-        display: inline-block;
-        position: absolute;
-    
-        min-width: 100%;
-        min-height: 100%;
-        top: 0;
-    
-        background-color: $light-gray;
-    }
+    width: 660px;
+    height: 35px;
+
+    background-color: $light-gray;    
 }
 
-.videoplayer__btn{   
-    @include bg(initial, center center);
-    
-    cursor: pointer;
-    z-index: 1;
-}
-
-.play{
-    background-image: url('../img/howwork/pleer/play.png');
+.videoplayer__play--control { 
+    fill:#626262;
+    @include centered(initial, 'y');
     width: 16px;
     height: 22px;
 }
-.shkala{
-    background-image: url('../img/howwork/pleer/shkala.png');
-    width: 444px;
-    height: 4px;
+
+.videoplayer__playicon {
+    max-width: 100%;
+    max-height: 100%;
 }
 
-.videoplayer__btn-regulyator{
-    background-image: url('../img/howwork/pleer/regulyator.png');
-    width: 12px;
-    height: 13px;
+.videoplayer__shkala {
+    cursor: pointer;
+
+    position: relative;
+    @include btn-shkala(444px);
+    &:before {        
+        @include btn-control(13px);
+        margin-left: 73px;        
+    }
 }
-.volume{
-    background-image: url('../img/howwork/pleer/volume.png');
+
+.videoplayer__volume {
+    cursor: pointer;
+
     width: 18px;
     height: 22px;
 }
-.sound-meter{
-    background-image: url('../img/howwork/pleer/sound_meter.png');
-    width: 58px;
-    height: 4px;
+
+.videoplayer__volumeicon {
+    max-width: 100%;
+    max-height: 100%;
 }
 
-.shkala,
-.sound-meter{
-    display: flex;
-    align-items: center;
+.videoplayer__sound-meter {
+    cursor: pointer;
 
-    padding-left: 50px;
-}
-.sound-meter{
-    justify-content: flex-end;
-    padding-left: 0;
+    @include btn-shkala(58px);
+    &:before {
+        @include btn-control(13px);
+        right: 10px;
+        border-radius: 50%;
+    }
 }

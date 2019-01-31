@@ -38,8 +38,8 @@
 
 .burgers__auto-scroll-image,
 .burgers__composition-image,
-.burgers__chr-image,
-.burgers__calories-image,
+.burgers__chr-icon,
+.burgers__calories-icon,
 .burgers__image {
     @include imgsize(contain);
 }
@@ -193,7 +193,10 @@
     font-weight: $light;
 }
 
-
+.burgers__calories-img-block{
+    width: 60px;
+    height: 60px;
+}
 
 /* burgers__description */
 

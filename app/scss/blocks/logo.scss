@@ -2,32 +2,19 @@
 .logo{
     display: inline-block;
 
-    flex-shrink: 0;
-
-    //margin-right: 69px;    
+    flex-shrink: 0;  
 }
 
 .logo__link{    
     display: inline-block;
-    /*
-    width: 92px;
-    height: 69px;
-    overflow: hidden;
-    */
 }
 
 .logo__image{
     width: 92px;
     height: 69px;
-    overflow: hidden;
-    //@include imgsize(contain);  
+    overflow: hidden; 
 }
 
 .logo__title{
     display: none;
-    /*
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    */
 }

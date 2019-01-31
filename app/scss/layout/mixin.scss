@@ -1,3 +1,7 @@
+//----------------------------
+//  Миксины
+//----------------------------
+
 //центрирование элементов
 @mixin centered($pos: absolute, $axis: 'both') {
     position: $pos;
@@ -69,4 +73,30 @@
     position: absolute;
     @include circle(14px, 1px, transparent, transparent);
     @include centered('both');
+}
+
+// для кнопок управления видеоплеером
+@mixin btn-control ($width) {
+    content: "";
+    display: inline-block;
+    @include centered(absolute,'y');
+    width: $width;
+    height: $width;   
+    background-color: inherit;
+    border-radius: 50%;
+}
+@mixin btn-shkala($width) {
+    width: $width;
+    height: 4px;
+    border-radius: 1px;
+    background-color: $button-control;
+}
+
+//----------------------------
+//  Функции
+//----------------------------
+
+//Перевод из px в rem
+@function rem($pixels){
+    @return $pixels / $font_size + rem;
 }
