@@ -4,9 +4,14 @@
 
 html {
     font-size: $basefontsize;
+    
+    position: relative; // прибитие футера`
+    min-height: 100%;   // прибитие футера
 }
 
 body {
+    margin: 0 0 60px; // нижний margin равен высоте футера
+
     font-family: 'ubuntu', Helvetica, sans-serif;
     line-height: 1.45;
     margin: 0;
