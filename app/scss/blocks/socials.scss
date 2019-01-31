@@ -6,7 +6,7 @@
 }
 
 .footer__social-item{
-    margin-right: 20px;
+    margin-right: rem(20px);
 
     &:last-child {
         margin-right: 0;
@@ -35,16 +35,16 @@
 
 @each $social in (vk, fb, instagram, tw) {
     .footer__social-im--#{$social}:before{
-        $width: 20px;
-        $height: 20px;
+        $width: rem(20px);
+        $height: rem(20px);
 
         @if ($social == vk) {
-            $width: 23px;
-            $height: 13px;
+            $width: rem(23px);
+            $height: rem(13px);
         } 
         @if ($social == tw) {
-            $width: 20px;
-            $height: 16px;
+            $width: rem(20px);
+            $height: rem(16px);
         } 
 
         @include socialimg($width, $height);

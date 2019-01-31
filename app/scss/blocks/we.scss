@@ -5,10 +5,10 @@
         justify-content: center;
         align-items: center;
 
-        max-width: 940px;
+        max-width: rem(940px);
     }
     
     & .sections__title {
-        margin-bottom: 56px;
+        margin-bottom: rem(56px);
     }
 }

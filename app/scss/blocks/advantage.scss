@@ -7,10 +7,9 @@
 }
 
 .advantage__item{
-    //width: 300px;
     flex:1;
 
-    margin-right: 20px;
+    margin-right: rem(20px);
     
     &:last-child {
         margin-right: 0;
@@ -18,11 +17,11 @@
 }
 
 .advantage__image{
-    height: 90px;
+    height: rem(90px);
 
     overflow: hidden;
 
-    margin-bottom: 21px;
+    margin-bottom: rem(21px);
 }
 
 .advantage__image-icon{
@@ -30,8 +29,8 @@
 }
 
 .advantage__title{
-    margin-bottom: 10px;
-    font-size: $basefontsize+10px; //24px
+    margin-bottom: rem(10px);
+    font-size: rem($basefontsize+10px); //24px
 }
 
 .advantage__description{

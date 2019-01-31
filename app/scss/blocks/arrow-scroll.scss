@@ -1,12 +1,12 @@
 .arrow-scroll__block {     
     text-align: center;  
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
 }
 
 .arrow-scroll__link {
     display: inline-block;
-    width: 29px;
-    height: 15px;
+    width: rem(29px);
+    height: rem(15px);
 
     animation: Up-Down 1s infinite;
 }

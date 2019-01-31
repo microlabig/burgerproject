@@ -4,7 +4,7 @@
 
     flex: 1;
 
-    max-width: 1010px;
+    max-width: rem(1010px);
     margin: 0 auto;
 }
 
@@ -25,15 +25,15 @@
     display: inline-block;
     flex-shrink: 0;
     
-    width: 29px;
-    height: 15px;
+    width: rem(29px);
+    height: rem(15px);
 
     transform: rotate(90deg);
 
     overflow: hidden;
     cursor: pointer;
 
-    margin-right: 20px;
+    margin-right: rem(20px);
 }
 
 .burgers__auto-scroll-image,
@@ -47,12 +47,12 @@
 .burgers__auto-scroll--right{
     transform: rotate(-90deg);
 
-    margin-left: 39px;
+    margin-left: rem(39px);
 }
 
 .burgers__composition-block{
     position: absolute;
-    bottom: 45px;
+    bottom: rem(45px);
 
     display: flex;
 }
@@ -62,9 +62,9 @@
 .burgers__composition-btn-block{
     position: relative;
 
-    width: 90px;
-    height: 90px;
-    border-radius: 5px;
+    width: rem(90px);
+    height: rem(90px);
+    border-radius: rem(5px);
     background-color: $light-orange;
 
     display: flex;
@@ -85,8 +85,8 @@
 .burgers__composition-img{
     position: relative;
 
-    width: 46px;
-    height: 44px;
+    width: rem(46px);
+    height: rem(44px);
 
     overflow: hidden;
 }
@@ -99,8 +99,8 @@
 }
 
 .burgers__img-block{
-    width: 505px;
-    height: 329px;
+    width: rem(505px);
+    height: rem(329px);
     overflow: hidden;
 }
 
@@ -112,8 +112,8 @@
     justify-content: center;
     align-items: center;
 
-    width: 60px;
-    height: 60px;
+    width: rem(60px);
+    height: rem(60px);
 }
 
 .burgers__calories-count,
@@ -124,7 +124,7 @@
 
 .burgers__calories-count{
     position: absolute;
-    font-size: $basefontsize+6px; //20px;
+    font-size: rem($basefontsize+6px); //20px;
 }
 
 .burgers__calories-text{
@@ -134,25 +134,25 @@
 /* burgers__charackters-block */
 
 .burgers__charackters-block{    
-    width: 270px; 
+    width: rem(270px); 
     
-    border-radius: 5px;
+    border-radius: rem(5px);
     background-color: rgba(255,255,255,.9);
 
     opacity: 0;
 
-    right:999px;
+    right:rem(999px);
 }
 
 .burgers__charackters-list{
-    padding:28px 22px;
+    padding:rem(28px) rem(22px);
 }
 
 .burgers__charackters-item {
     display: flex;
     align-items: center;
 
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
     
     &:last-child {
         margin-bottom: 0;
@@ -160,15 +160,15 @@
 }
 
 .burgers__chr-img-block{
-    width: 48px;
-    height: 43px;
+    width: rem(48px);
+    height: rem(43px);
     
     overflow: hidden;
 
     display: flex;
     align-items: center;
 
-    margin-right: 20px;
+    margin-right: rem(20px);
 }
 
 
@@ -194,8 +194,8 @@
 }
 
 .burgers__calories-img-block{
-    width: 60px;
-    height: 60px;
+    width: rem(60px);
+    height: rem(60px);
 }
 
 /* burgers__description */
@@ -205,7 +205,7 @@
 }
 
 .burgers__description .sections__title{
-    margin-bottom: 56px;
+    margin-bottom: rem(56px);
 }
 
 .burgers__text{
@@ -222,16 +222,16 @@
     display: inline-block;
 
     font-family: 'gagalin';
-    font-size: $titlefontsize;    
+    font-size: rem($titlefontsize);    
     color: $light-red;
 
-    margin-right: 3px;
+    margin-right: rem(3px);
 }
 
 .burgers__price-val{
     @extend .burgers__price-text;
-    font-size: $basefontsize+16px; //30px;
+    font-size: rem($basefontsize+16px); //30px;
 
-    margin-right: 24px;
+    margin-right: rem(24px);
 }
 

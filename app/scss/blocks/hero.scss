@@ -4,12 +4,12 @@
     position: relative;
     
     & .container {
-        max-width: 940px;
+        max-width: rem(940px);
     }
 }
 
 .hero .sections__title {
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
 }
 
 .sections__content {
@@ -22,11 +22,11 @@
 .section__burger {
     position: relative;
     display: inline-block;
-    width: 417px;
-    height: 424px;
+    width: rem(417px);
+    height: rem(424px);
     overflow: hidden;
     flex-shrink: 0;
-    margin-right: 11px;
+    margin-right: rem(11px);
     &:before {
         content: "";
         display: inline-block;
@@ -34,8 +34,7 @@
         min-width: 100%;
         min-height: 100%;
         background-image: url('../img/hero/-e-drops.png');
-        @include bg(contain,
-        center top 70px);
+        @include bg(contain,center top 70px);
     }
 }
 
@@ -49,11 +48,11 @@
     flex-direction: column;
     justify-content: center;
     width: min-content;
-    margin-top:32px;
+    margin-top:rem(32px);
 }
 
 .sections__slogan-title2 {
     color: $white;
-    font-size: 65px;
-    line-height: 60px;
+    font-size: rem(65px);
+    line-height: rem(60px);
 }

@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    margin: 0 0 60px; // нижний margin равен высоте футера
+    margin: 0 0 rem(60px); // нижний margin равен высоте футера
 
     font-family: 'ubuntu', Helvetica, sans-serif;
     line-height: 1.45;
@@ -67,16 +67,16 @@ h3 {
 }
 
 .button {
-    border-radius: 5px;
+    border-radius: rem(5px);
     background-color: $red; 
 
     text-decoration: none;
     text-transform: uppercase;
     color: $white;
     font-weight: $medium;
-    font-size: 13px;
+    font-size: rem(13px);
 
-    padding: 8px 13px;
+    padding: rem(8px) rem(13px);
 
     &:hover {
         background-color: darken($red, 10%); 

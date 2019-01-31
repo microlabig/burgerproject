@@ -1,7 +1,7 @@
 .button-nav {
     position: fixed;
-    top: 90px;
-    right: 50px;
+    top: rem(90px);
+    right: rem(50px);
     z-index: 10;
 }
 
@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: center;    
 
-    margin-bottom: 15px; 
+    margin-bottom: rem(15px); 
 
     &:last-child {
         margin-bottom: 0; 
@@ -36,7 +36,7 @@
 
 .button-nav__dot {
     display: inline-block;
-    @include circle(6px, 1px, transparent, $white);
+    @include circle(rem(6px), rem(1px), transparent, $white);
 }
 
 .button-nav__item--active:after {

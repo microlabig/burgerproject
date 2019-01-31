@@ -3,8 +3,8 @@
 }
 
 .videoplayer__img-block {
-    width: 660px;
-    height: 370px;
+    width: rem(660px);
+    height: rem(370px);
     overflow: hidden;  
 }
 
@@ -12,8 +12,8 @@
     position: absolute;
     cursor: pointer;  
 
-    width: 82px;
-    height: 118px;
+    width: rem(82px);
+    height: rem(118px);
 
     @include centered(absolute, 'both');
     fill: $white;
@@ -33,8 +33,8 @@
     justify-content: space-around;
     align-items: center;
 
-    width: 660px;
-    height: 35px;
+    width: rem(660px);
+    height: rem(35px);
 
     background-color: $light-gray;    
 }
@@ -42,8 +42,8 @@
 .videoplayer__play--control { 
     fill:#626262;
     @include centered(initial, 'y');
-    width: 16px;
-    height: 22px;
+    width: rem(16px);
+    height: rem(22px);
 }
 
 .videoplayer__playicon {
@@ -55,18 +55,18 @@
     cursor: pointer;
 
     position: relative;
-    @include btn-shkala(444px);
+    @include btn-shkala(rem(444px));
     &:before {        
-        @include btn-control(13px);
-        margin-left: 73px;        
+        @include btn-control(rem(13px));
+        margin-left: rem(73px);        
     }
 }
 
 .videoplayer__volume {
     cursor: pointer;
 
-    width: 18px;
-    height: 22px;
+    width: rem(18px);
+    height: rem(22px);
 }
 
 .videoplayer__volumeicon {
@@ -77,10 +77,10 @@
 .videoplayer__sound-meter {
     cursor: pointer;
 
-    @include btn-shkala(58px);
+    @include btn-shkala(rem(58px));
     &:before {
-        @include btn-control(13px);
-        right: 10px;
+        @include btn-control(rem(13px));
+        right: rem(10px);
         border-radius: 50%;
     }
 }

@@ -4,7 +4,7 @@
     }
 
     30%{
-        transform: translateY(10px);
+        transform: translateY(rem(10px));
     }
 
     to {

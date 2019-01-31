@@ -16,7 +16,7 @@
     align-items: center;
     flex-wrap: nowrap;
 
-    margin-right: 15px;
+    margin-right: rem(15px);
 
     &:last-child{
         margin-right: 0;
@@ -31,7 +31,7 @@
         display: inline-block;
         vertical-align: middle;
         color: $white;
-        margin-left: 15px;                
+        margin-left: rem(15px);                
     }
 
     &:last-child:after {
@@ -46,6 +46,6 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: $medium;
-    font-size: 13px;
+    font-size: rem(13px);
     color: $white;
 }

@@ -97,6 +97,6 @@
 //----------------------------
 
 //Перевод из px в rem
-@function rem($pixels){
-    @return $pixels / $font_size + rem;
+@function rem($px){
+    @return $px / $basefontsize + 0rem;
 }

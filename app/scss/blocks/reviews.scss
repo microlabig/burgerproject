@@ -66,14 +66,14 @@
 .reviews__name{
     font-size: inherit;
 
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
 }
 
 .reviews__text{
     font-size: inherit;
     overflow: hidden;
 
-    margin-bottom: 17px;
+    margin-bottom: rem(17px);
 }
 
 .button--more{

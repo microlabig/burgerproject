@@ -5,7 +5,7 @@
     font-size: inherit;
     font-weight: $light;
 
-    margin-bottom: 12px;
+    margin-bottom: rem(12px);
 }
 
 .footer__copyright-number{
@@ -30,10 +30,10 @@
 .footer__copyright-phoneimage {
     display: inline-block;
     
-    width: 12px;
-    height: 11px;
+    width: rem(12px);
+    height: rem(11px);
 
-    margin-right: 6px;
+    margin-right: rem(6px);
 }
 
 .footer__copyright-phoneicon {
