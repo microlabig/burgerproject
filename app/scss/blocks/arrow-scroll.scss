@@ -11,6 +11,7 @@
     animation: Up-Down 1s infinite;
 }
 
-.arrow-scroll__img {
+.arrow-scroll__icon {
+    fill: $white;
     @include imgsize(contain);    
 }
