@@ -1,4 +1,13 @@
 //----------------------------
+//  Функции
+//----------------------------
+
+//Перевод из px в rem
+@function rem($px){
+    @return $px / $basefontsize + 0rem;
+}
+
+//----------------------------
 //  Миксины
 //----------------------------
 
@@ -42,7 +51,7 @@
 }
 
 // иконки social в footer
-@mixin socialimg ($width: 20px, $height: 20px) {
+@mixin socialimg ($width: rem(20px), $height: rem(20px)) {
     content: "";
     display: inline-block;
     @include bg(cover, center center);
@@ -71,7 +80,7 @@
     content: "";
     display: inline-block;
     position: absolute;
-    @include circle(14px, 1px, transparent, transparent);
+    @include circle(rem(14px), rem(1px), transparent, transparent);
     @include centered('both');
 }
 
@@ -87,16 +96,8 @@
 }
 @mixin btn-shkala($width) {
     width: $width;
-    height: 4px;
-    border-radius: 1px;
+    height: rem(4px);
+    border-radius: rem(1px);
     background-color: $button-control;
 }
 
-//----------------------------
-//  Функции
-//----------------------------
-
-//Перевод из px в rem
-@function rem($px){
-    @return $px / $basefontsize + 0rem;
-}
