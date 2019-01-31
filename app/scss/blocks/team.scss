@@ -1,11 +1,12 @@
 .team{   
-    display: flex;
-    justify-content: flex-end;
+    position: relative;
 
     & .container{
-        background-color: rgba(51,51,51,.85);
-    
-        flex-basis: 50%;
+        position: absolute;
+        width: 50%;
+        right: 0;
+
+        background-color: rgba(51,51,51,.85);  
     }
 }
 
@@ -68,14 +69,22 @@
     }
 }
 
-.team__item--checked .team__name:before{
-    transform: rotate(180deg);
+.team__item--checked {
+    .team__name:before {
+        transform: rotate(180deg);
+    }
+    .team__block-description {
+        height: 100%;
+    }
 }
 
 .team__block-description{
     display: flex;
 
     margin-left: 15px;
+
+    height: 0;
+    overflow: hidden;
 }
 
 .team__img-block{
