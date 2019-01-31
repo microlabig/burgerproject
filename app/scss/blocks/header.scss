@@ -1,8 +1,35 @@
-.header{
+.header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;   
 
-    margin-top: rem(13px);
+    margin-top: rem(13px);    
+}
+
+//-------------------------------
+//768 px
+@media (max-width:768px) {
+    .header {
+        position: relative;        
+    }
+
+    .header__navigation {  
+        order: 1;  
+        margin-right: 33px;
+        &:before {
+            content: "";
+            display: inline-block;
+            background-image: url('../img/hero/menu-tablet.png');
+            @include bg(contain,
+            center center);
+            width: rem(24px);
+            height: rem(22px);
+        }
+    }
+    
+    .header__button {
+        margin-right: rem(31px);
+    }
+    
 }

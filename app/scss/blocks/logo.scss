@@ -18,3 +18,13 @@
 .logo__title{
     display: none;
 }
+
+
+//-------------------------------
+//768 px
+@media (max-width:768px) {
+    .logo{
+        z-index: 1;   
+        margin-left: rem(24px);
+    }
+}

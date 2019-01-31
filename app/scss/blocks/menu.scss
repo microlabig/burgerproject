@@ -124,3 +124,25 @@
     width: 100%;
     height: 50%;
 }
+
+
+
+//-------------------------------
+//768 px
+@media (max-width:768px) {
+    .menu__right-block {
+        width: 100%;
+    }       
+
+    .menu__left-block {
+        margin-left: rem(24px);
+    }
+    
+    .menu__title-block {
+        height: 30%;
+    }
+    
+    .menu__dummy {
+        height: 70%;
+    }
+}

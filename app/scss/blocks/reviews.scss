@@ -83,3 +83,32 @@
         background-color: darken($gray, 10%);
     }
 }
+
+
+//-------------------------------
+//768 px
+@media (max-width:768px) {    
+    .reviews__item{         
+        flex-basis: calc(100%/2);
+        width: 50%;
+        height: 25%;
+    }
+
+    .reviews__description-block {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .reviews__name,
+    .reviews__text {
+        margin-bottom: 0;
+    }
+
+    .reviews__text {
+        overflow: overlay;
+        line-height: rem(24px);
+    }
+}

@@ -188,3 +188,28 @@
         background-color: rgba(31, 33, 34, 0.8);
     }
 }
+
+
+//-------------------------------
+//768 px
+@media (max-width:768px) { 
+    .formwrapper {
+        flex-direction: column;
+        max-width: rem(472px);
+    }
+
+    .form__content {
+        margin-right: 0;
+    }
+
+    .form__content {
+        margin-bottom: rem(19px);
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    
+    .form__checkbox {
+        margin-bottom: rem(40px);
+    }
+}

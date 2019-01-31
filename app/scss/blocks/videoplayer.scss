@@ -40,7 +40,7 @@
 }
 
 .videoplayer__play--control { 
-    fill:#626262;
+    fill:$button-control;
     @include centered(initial, 'y');
     width: rem(16px);
     height: rem(22px);
@@ -83,4 +83,30 @@
         right: rem(10px);
         border-radius: 50%;
     }
+}
+
+
+//-------------------------------
+//768 px
+@media (max-width:768px) { 
+    .videoplayer {
+        max-width: rem(720px);
+    }
+
+    .videoplayer__play {
+        fill: $black;
+        opacity: 0.9;
+    }
+    .videoplayer__play--control { 
+        fill:$button-control;
+    }
+
+    .videoplayer__shkala {
+        width: rem(602px);
+    }
+
+    .videoplayer__volume,
+    .videoplayer__sound-meter {
+        display: none;
+    }    
 }

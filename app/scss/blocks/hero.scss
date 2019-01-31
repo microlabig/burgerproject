@@ -22,8 +22,8 @@
 .section__burger {
     position: relative;
     display: inline-block;
-    width: rem(417px);
-    height: rem(424px);
+    max-width: rem(417px);
+    max-height: rem(424px);
     overflow: hidden;
     flex-shrink: 0;
     margin-right: rem(11px);
@@ -34,7 +34,7 @@
         min-width: 100%;
         min-height: 100%;
         background-image: url('../img/hero/-e-drops.png');
-        @include bg(contain,center top 70px);
+        @include bg(contain,center top rem(70px));
     }
 }
 
@@ -55,4 +55,29 @@
     color: $white;
     font-size: rem(65px);
     line-height: rem(60px);
+}
+
+
+//-------------------------------
+//768 px
+
+@media (max-width:768px) {
+    .hero {
+        & .container {
+            max-width: rem(768px);
+        }
+    }
+
+    .sections__content {
+        flex-direction: column;
+    }
+
+    .sections__slogan {
+        text-align: center;
+    }
+
+    .section__burger {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
 }

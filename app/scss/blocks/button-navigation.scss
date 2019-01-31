@@ -43,3 +43,13 @@
     @include circle_fixed;
     border-color: $white;
 }
+
+
+//-------------------------------
+//768 px
+
+@media (max-width:768px) {
+    .button-nav {
+        display: none;
+    }
+}
