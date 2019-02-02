@@ -8,6 +8,16 @@
 
         background-color: rgba(51,51,51,.85);  
     }
+    @include tablets {
+        & .container{
+            width: 100%;
+        }
+
+        & .sections__title{
+            text-align: center;
+            margin-bottom: rem(60px);
+        }  
+    }
 }
 
 .team__wrapper{
@@ -23,6 +33,9 @@
     & .sections__title{
         margin-bottom: rem(46px);
     }
+    @include tablets { 
+        max-width: rem(348px);
+    } 
 }
 
 .team__title{
@@ -36,6 +49,16 @@
     &:last-child,
     &:last-child .team__name {
         margin-bottom: 0;
+    }
+    @include tablets{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: rem(35px);
+        &:last-child,
+        &:last-child .team__name {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -71,6 +94,10 @@
         
         margin-right: rem(10px);
     }
+    @include tablets {
+        font-size: rem(24px);
+        margin-bottom: 20px;
+    }
 }
 
 .team__item--checked {
@@ -89,6 +116,11 @@
 
     height: 0;
     overflow: hidden;
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .team__img-block{
@@ -101,6 +133,10 @@
     flex-shrink: 0;
 
     margin-right: rem(21px);
+    @include tablets {
+        margin-right: 0;
+        margin-bottom: rem(18px);
+    }
 }
 
 .team__image{
@@ -113,6 +149,9 @@
 .team__text{    
     color:$white;    
     font-style: rem(14px);
+    @include tablets{
+        text-align: center;
+    }
 }
 
 .team__profession{
@@ -125,54 +164,3 @@
     font-weight: $light;
 }
 
-
-
-//-------------------------------
-//768 px
-@media (max-width:768px) {
-    .team{   
-        & .container{
-            width: 100%;
-        }
-
-        & .sections__title{
-            text-align: center;
-            margin-bottom: rem(60px);
-        }        
-    }
-
-    .team__wrapper {
-        max-width: rem(348px);
-    }
-    
-    .team__item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: rem(35px);
-        &:last-child,
-        &:last-child .team__name {
-            margin-bottom: 0;
-        }
-    }    
-
-    .team__name {
-        font-size: rem(24px);
-        margin-bottom: 20px;
-    }
-
-    .team__block-description {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .team__img-block {
-        margin-right: 0;
-        margin-bottom: rem(18px);
-    }
-
-    .team__text{
-        text-align: center;
-    }
-}

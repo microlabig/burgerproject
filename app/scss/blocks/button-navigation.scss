@@ -3,6 +3,9 @@
     top: rem(90px);
     right: rem(50px);
     z-index: 10;
+    @include tablets {
+        display: none;
+    }
 }
 
 .button-nav__list {
@@ -44,12 +47,3 @@
     border-color: $white;
 }
 
-
-//-------------------------------
-//768 px
-
-@media (max-width:768px) {
-    .button-nav {
-        display: none;
-    }
-}

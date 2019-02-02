@@ -11,6 +11,21 @@
 //  Миксины
 //----------------------------
 
+//Адаптивность
+// для планшетов 
+@mixin tablets() {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+// для телефонов
+@mixin phones() {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+
 //центрирование элементов
 @mixin centered($pos: absolute, $axis: 'both') {
     position: $pos;

@@ -4,17 +4,15 @@
     justify-content: space-between;
     align-items: center;   
 
-    margin-top: rem(13px);    
+    margin-top: rem(13px);  
+    
+    @include tablets {
+        position: relative; 
+    }
 }
 
-//-------------------------------
-//768 px
-@media (max-width:768px) {
-    .header {
-        position: relative;        
-    }
-
-    .header__navigation {  
+.header__navigation {  
+    @include tablets {
         order: 1;  
         margin-right: 33px;
         &:before {
@@ -27,9 +25,10 @@
             height: rem(22px);
         }
     }
-    
-    .header__button {
+}
+
+.header__button {
+    @include tablets {
         margin-right: rem(31px);
     }
-    
 }

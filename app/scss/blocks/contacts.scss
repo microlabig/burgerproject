@@ -1,9 +1,8 @@
-.sections--contacts {
+.contacts {
     & .container {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        
-        width: 100%;
     }
 }
 

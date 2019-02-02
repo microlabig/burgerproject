@@ -6,6 +6,12 @@
     & .container {
         max-width: rem(940px);
     }
+
+    @include tablets {
+        & .container {
+            max-width: rem(768px);
+        }
+    }
 }
 
 .hero .sections__title {
@@ -17,6 +23,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include tablets {
+        flex-direction: column; 
+    }
 }
 
 .section__burger {
@@ -36,6 +45,10 @@
         background-image: url('../img/hero/-e-drops.png');
         @include bg(contain,center top rem(70px));
     }
+    @include tablets {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
 }
 
 .sections__burger-img {
@@ -49,6 +62,9 @@
     justify-content: center;
     width: min-content;
     margin-top:rem(32px);
+    @include tablets {
+        text-align: center;
+    }
 }
 
 .sections__slogan-title2 {
@@ -57,27 +73,3 @@
     line-height: rem(60px);
 }
 
-
-//-------------------------------
-//768 px
-
-@media (max-width:768px) {
-    .hero {
-        & .container {
-            max-width: rem(768px);
-        }
-    }
-
-    .sections__content {
-        flex-direction: column;
-    }
-
-    .sections__slogan {
-        text-align: center;
-    }
-
-    .section__burger {
-        margin-right: 0;
-        margin-bottom: 40px;
-    }
-}
