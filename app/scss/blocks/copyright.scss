@@ -6,6 +6,9 @@
     font-weight: $light;
 
     margin-bottom: rem(12px);
+    @include tablets {
+        margin-bottom: rem(8px);
+    }
 }
 
 .footer__copyright-number{

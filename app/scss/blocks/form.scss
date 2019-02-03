@@ -10,7 +10,7 @@
         text-align: center;
         margin-bottom: rem(44px);
         @include tablets {
-            white-space: nowrap;
+            //white-space: nowrap;
         }
         @include phones {
             text-align: center;

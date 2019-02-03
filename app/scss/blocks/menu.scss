@@ -103,6 +103,8 @@
 }
 
 .menu__item-title-block {
+    flex-shrink: 0;
+    
     display: flex;
     align-items: flex-end;
     justify-content: center;
