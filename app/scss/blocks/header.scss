@@ -10,7 +10,7 @@
         position: relative; 
     }
 }
-
+/*
 .header__navigation {  
     @include tablets {
         order: 1;  
@@ -26,9 +26,10 @@
         }
     }
 }
+*/
 
 .header__button {
     @include tablets {
-        margin-right: rem(31px);
+        margin-right: rem(44px);
     }
 }

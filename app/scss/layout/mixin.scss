@@ -24,7 +24,12 @@
         @content;
     }
 }
-
+// для телефонов меньше 480px
+@mixin phones-small() {
+    @media screen and (max-width: $phones-small) {
+        @content;
+    }
+}
 
 //центрирование элементов
 @mixin centered($pos: absolute, $axis: 'both') {

@@ -26,6 +26,8 @@
 .burgers__images-block {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
     @include tablets {
         display: flex;
         flex-wrap: nowrap;
@@ -82,7 +84,7 @@
 
     width: rem(90px);
     height: rem(90px);
-    border-radius: rem(5px);
+    border-radius: 5px;
     background-color: $light-orange;
 
     display: flex;
@@ -97,8 +99,10 @@
     &:hover + .burgers__charackters-block {
         opacity: 1;
         transition: .4s;
+        z-index: 1;
     }   
     @include tablets {
+        position: absolute;
         top: 0;
         left:0;
     }
@@ -121,8 +125,8 @@
 }
 
 .burgers__img-block{
-    width: rem(505px);
-    height: rem(329px);
+    max-width: rem(505px);
+    max-height: rem(329px);
     overflow: hidden;
     @include tablets {
         flex-shrink: 0;
@@ -139,6 +143,11 @@
 
     width: rem(60px);
     height: rem(60px);
+    @include tablets {
+        position: absolute;
+        top: 0;
+        right:0;
+    }
 }
 
 .burgers__calories-count,
@@ -161,7 +170,7 @@
 .burgers__charackters-block{    
     width: rem(270px); 
     
-    border-radius: rem(5px);
+    border-radius: 5px;
     background-color: rgba(255,255,255,.9);
 
     opacity: 0;
@@ -267,6 +276,9 @@
     color: $light-red;
 
     margin-right: rem(3px);
+    @include tablets {
+        font-size: rem($titlefontsize-phone);
+    }
 }
 
 .burgers__price-val{

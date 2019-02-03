@@ -7,6 +7,9 @@
         z-index: 1;   
         margin-left: rem(24px);
     }
+    @include phones {           
+        margin-left:0;
+    }
 }
 
 .logo__link{    

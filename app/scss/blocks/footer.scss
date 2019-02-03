@@ -1,10 +1,18 @@
-.footer{
+.footer {
     // прибиваем футер
     position: absolute;
     left: 0;
+    right: 0;
     bottom: 0;
+
+    display: flex;
+    align-items: center;
+
     width: 100%;
     height: rem(60px); // фиксированая высота футера
+    @include phones {
+        height: rem(117px); // фиксированая высота футера
+    }
 }
 
 .footer__container{
@@ -13,6 +21,11 @@
     justify-content: space-around;
     margin: 0 auto;
     width: 87%;
+    @include phones {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 .footer__copyright,
@@ -20,3 +33,16 @@
     flex-basis: 50%;
 }
 
+.footer__copyright {
+    @include phones {
+        margin-bottom: rem(21px);
+    }
+}
+
+.footer__dummy {   
+    height: rem(60px);
+    width: 100%;
+    @include phones {
+        height: rem(117px);
+    }
+}

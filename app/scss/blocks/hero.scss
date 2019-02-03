@@ -14,8 +14,15 @@
     }
 }
 
-.hero .sections__title {
+.hero .sections__title {    
     margin-bottom: rem(30px);
+    @include tablets {
+        font-size: 5em;
+    }
+    @include phones {
+        white-space: nowrap;
+        font-size: 4em;
+    }
 }
 
 .sections__content {
@@ -25,6 +32,9 @@
     justify-content: center;
     @include tablets {
         flex-direction: column; 
+    }
+    @include phones {
+        padding: 0 16%;
     }
 }
 
@@ -36,18 +46,10 @@
     overflow: hidden;
     flex-shrink: 0;
     margin-right: rem(11px);
-    &:before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        min-width: 100%;
-        min-height: 100%;
-        background-image: url('../img/hero/-e-drops.png');
-        @include bg(contain,center top rem(70px));
-    }
+    
     @include tablets {
         margin-right: 0;
-        margin-bottom: 40px;
+        margin-bottom: rem(40px);
     }
 }
 
@@ -64,6 +66,7 @@
     margin-top:rem(32px);
     @include tablets {
         text-align: center;
+        margin-top:0;
     }
 }
 
@@ -71,5 +74,8 @@
     color: $white;
     font-size: rem(65px);
     line-height: rem(60px);
+    @include phones {
+        font-size: 3em;
+    }
 }
 

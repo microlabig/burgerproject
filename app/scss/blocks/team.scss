@@ -62,7 +62,7 @@
     }
 }
 
-.team__item--checked .team__name{
+.team__item+.is-active .team__name{
     color:$yellow;
 }
 
@@ -93,6 +93,7 @@
         border-width: rem(7px) rem(5px) 0 rem(5px);
         
         margin-right: rem(10px);
+        margin-bottom: 2%;
     }
     @include tablets {
         font-size: rem(24px);
@@ -100,7 +101,7 @@
     }
 }
 
-.team__item--checked {
+.team__item+.is-active {
     .team__name:before {
         transform: rotate(180deg);
     }
@@ -120,7 +121,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-left: 0;
     }
+    
 }
 
 .team__img-block{

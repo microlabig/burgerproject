@@ -1,7 +1,10 @@
 .videoplayer {
     @include tablets{
         max-width: rem(720px);
-    }
+    }    
+    @include tablets{
+        max-width: rem(460px);
+    }    
 }
 
 .videoplayer__preview{
@@ -9,15 +12,20 @@
 }
 
 .videoplayer__img-block {
-    width: rem(660px);
-    height: rem(370px);
-    overflow: hidden;  
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden; 
+     
+}
+
+.videoplayer__image {
+    @include imgsize(contain);
 }
 
 .videoplayer__play {
     position: absolute;
     cursor: pointer;  
-
+    
     width: rem(82px);
     height: rem(118px);
 
@@ -30,9 +38,7 @@
     }
 }
 
-.videoplayer__image {
-    @include imgsize(contain);
-}
+
 
 /* player */
 
@@ -43,10 +49,13 @@
     justify-content: space-around;
     align-items: center;
 
-    width: rem(660px);
+    max-width: 100%;
     height: rem(35px);
 
-    background-color: $light-gray;    
+    background-color: $light-gray;   
+    @include phones {
+        height: rem(28px);
+    } 
 }
 
 .videoplayer__play--control { 
@@ -75,6 +84,9 @@
     }
     @include tablets{
         width: rem(602px);
+    }
+    @include phones {
+        width: rem(386px);
     }
 }
 

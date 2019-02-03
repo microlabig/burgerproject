@@ -4,19 +4,21 @@
 
 html {
     font-size: $basefontsize;
-    
+    /*
     position: relative; // прибитие футера`
     min-height: 100%;   // прибитие футера
+    */
+    @include phones-small {
+        font-size: $basefontsize-phonesmall;
+    }
 }
 
 body {
-    margin: 0 0 rem(60px); // нижний margin равен высоте футера
-
     font-family: 'ubuntu', Helvetica, sans-serif;
     line-height: 1.45;
     margin: 0;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-smoothing: antialiased;    
+    -moz-osx-smoothing: antialiased;  
 }
 
 html,
@@ -48,6 +50,10 @@ h1,h2,h4 {
 
     font-size: rem($titlefontsize);
     text-transform: uppercase;
+
+    @include phones {
+        font-size: rem($titlefontsize-phone);
+    }
 }
 
 h3 {
@@ -67,7 +73,7 @@ h3 {
 }
 
 .button {
-    border-radius: rem(5px);
+    border-radius: 5px;
     background-color: $red; 
 
     text-decoration: none;
