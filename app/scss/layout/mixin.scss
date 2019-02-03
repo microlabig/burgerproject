@@ -17,6 +17,9 @@
     @media screen and (max-width: $tablets) {
         @content;
     }
+    @media print {
+        @content;
+    }
 }
 // для телефонов
 @mixin phones() {
