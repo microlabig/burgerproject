@@ -92,4 +92,10 @@ h3 {
 
 .container {
     width: 96%;
+    @include tablets {
+        max-width: 100%;
+    }
+    @include phones {
+        width: 100%;
+    }
 }

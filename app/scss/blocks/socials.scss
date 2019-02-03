@@ -1,40 +1,34 @@
 /* socials */
 
-.footer__social-list{
-    display: flex;
-    justify-content: flex-end;
+.social-list{
+    display: flex;    
 }
 
-.footer__social-item{
+.social-item{
     margin-right: rem(20px);
 
     &:last-child {
         margin-right: 0;
     }
 
-    &:hover .footer__social-img:before{
+    &:hover .social-img:before{
         filter: brightness(1);
         transition: filter .5s;
     }    
 }
 
-.footer__social-text{
-/*
-    text-indent: 100%;
-    white-space: normal;
-    overflow:hidden;
-*/
+.social-text{
     display: none;
 }
 
-.footer__social-img{
+.social-img{
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
 }
 
 @each $social in (vk, fb, instagram, tw) {
-    .footer__social-im--#{$social}:before{
+    .social-im--#{$social}:before{
         $width: rem(20px);
         $height: rem(20px);
 

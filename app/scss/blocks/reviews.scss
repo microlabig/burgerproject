@@ -76,7 +76,9 @@
     display: flex;
     flex-direction: column;
     align-items: baseline;
+    padding: 5% 5%;
     @include tablets {
+        
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -84,10 +86,6 @@
         justify-content: center;
     }
     @include phones {
-        /*
-        align-items: center;
-        justify-content: center;
-        */
         display: inline-block;
     }
 }
@@ -103,6 +101,9 @@
     font-size: inherit;
 
     margin-bottom: rem(30px);
+    @include tablets {
+        margin-bottom: rem(20px);
+    }
 
     @include phones {
         font-size: rem(24px);

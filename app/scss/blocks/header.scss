@@ -10,26 +10,12 @@
         position: relative; 
     }
 }
-/*
-.header__navigation {  
-    @include tablets {
-        order: 1;  
-        margin-right: 33px;
-        &:before {
-            content: "";
-            display: inline-block;
-            background-image: url('../img/hero/menu-tablet.png');
-            @include bg(contain,
-            center center);
-            width: rem(24px);
-            height: rem(22px);
-        }
-    }
-}
-*/
 
 .header__button {
     @include tablets {
         margin-right: rem(44px);
+    }
+    @include phones {
+        margin-right: rem(34px);
     }
 }

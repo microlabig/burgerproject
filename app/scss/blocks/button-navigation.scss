@@ -4,9 +4,12 @@
     right: rem(50px);
     z-index: 10;  
     @include tablets {
-        top: rem(40px);
-        right: rem(14px);
+        top: rem(39px);
+        right: rem(5px);
     }      
+    @include tablets {
+        right: rem(2px);
+    }   
 }
 
 .button-nav__list {
@@ -51,21 +54,24 @@
     border-color: $white;
 }
 
-//----------------------------
+// mobile button navigation
 
-.button-nav__mobilebutton {
+.button-nav__mobile {
     display: none;
+
+    cursor: pointer; 
+    width:24px;
     @include tablets {
         display: inline-block;
-        cursor: pointer;  
-        &:before {
-            content: "";
-            display: inline-block;
-            background-image: url('../img/hero/menu-tablet.png');
-            @include bg(contain,center center);
-            width: rem(24px);
-            height: rem(22px);
-        }
     }
 }
 
+.button-nav__mobile__line {
+    border: 2px solid $white;
+    margin-bottom: rem(5px);
+    border-radius: 2px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

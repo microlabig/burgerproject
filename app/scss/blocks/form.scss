@@ -5,6 +5,10 @@
         justify-content: center;
         align-items: center;
         max-width: rem(940px);
+        @include phones { 
+            max-width: 100%;
+            padding: 0 2%;
+        }
     }
     & .sections__title {
         text-align: center;
@@ -32,6 +36,10 @@
 
 .form__content {
     flex-basis: 50%;
+
+    display: flex;
+    flex-direction: column;
+
     margin-right: rem(20px);
     @include tablets {
         margin-right: 0;
@@ -42,12 +50,14 @@
     }
 }
 
-.form__content--comments {
-    display: flex;
-    flex-direction: column;
+.form__content:last-child {    
     margin-right: 0;
     & .form__row {
         margin-bottom: rem(40px);
+        
+        @include tablets {
+            margin-bottom: rem(19px);
+        }
     }
 }
 
@@ -57,13 +67,17 @@
     margin-bottom: rem(19px);
 }
 
-.form__row--contacts .form__elem {
-    flex-basis: 50%;
-    margin-right: rem(20px);
-}
-
-.form__row--contacts .form__elem--telefone {
-    margin-right: 0;
+.form__row--contacts {
+    .form__elem {
+        flex-basis: 50%;
+        margin-right: rem(20px);
+        &:last-child {
+            margin-right: 0;
+        }
+        @include phones {
+            margin-right: rem(10px);
+        }
+    }
 }
 
 .form__elem {
@@ -78,7 +92,8 @@
 
 .form__input {
     width: 100%;
-    height: rem(36px);
+    //height: rem(36px);
+    padding: rem(9px) 0;
     border-radius: rem(5px);
     background-color: $white;
     outline: none;
@@ -97,11 +112,12 @@
         margin-right: rem(20px);  
         &:last-child {
             margin-right: 0;
-            @include phones {
+            @include phones {                
                 display: none;
             }
         }
         @include phones {
+            margin-right: rem(10px);
             &:nth-last-child(2) {
                 margin-right: 0;
             }
@@ -135,9 +151,9 @@
     display: flex;
 }
 
-.form__radio-label {
+.form__radio-label {    
     display: flex;
-    align-content: center;
+    align-items: center;
     margin-right: rem(20px);
     &:last-child {
         margin-right: 0;
@@ -149,10 +165,10 @@
 }
 
 .form__radio-fake {
+    position: relative;
     display: inline-block;
-    vertical-align: middle;
-    @include circle(rem(15px), rem(1px), transparent, $white);
-    @include centered(relative, 'y');
+    //vertical-align: middle;
+    @include circle(rem(16px), rem(1px), transparent, $white);    
     margin-right: rem(5px);
     transition: border .5s;
     &:after {
@@ -167,8 +183,8 @@
 .form__radio-input:checked+.form__radio-fake {
     border: rem(1px) solid $light-red;
     &:after {
-        width: rem(7px);
-        height: rem(7px);
+        width: rem(8px);
+        height: rem(8px);
     }
 }
 
@@ -197,29 +213,32 @@
 .form__checkbox-fake {
     display: inline-block;
     position: relative;
-    vertical-align: middle;
-    @include circle(rem(15px), 0, transparent, $white);
-    border-radius: 0;
+    //vertical-align: middle;
+
+    //@include circle(rem(15px), 0, transparent, $white);
+    width: 15px;
+    height: 15px;
+    border: 0 solid transparent;
+    background-color: $white;
+
     margin-right: rem(5px);
     transition: border .5s;
     &:after {
         content: "";
         display: inline-block;
         position: absolute;
-        background-image: url('../img/form/check.png');
-        @include bg(contain,center center);
-        width: 0;
-        height: 0;
+        color: $red;
         @include centered(absolute,'both');
-        transition: .4s;
+        opacity: 0;
+        transition: opacity .4s;
     }
 }
 
 .form__checkbox-input:checked+.form__checkbox-fake {
-    border: rem(1px) solid $light-red;
+    border: 0 solid $light-red;
     &:after {
-        width: rem(7px);
-        height: rem(7px);
+        content: "✔";
+        opacity: 1;
     }
 }
 

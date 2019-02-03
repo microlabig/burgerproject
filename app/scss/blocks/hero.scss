@@ -5,13 +5,17 @@
     
     & .container {
         max-width: rem(940px);
-    }
-
-    @include tablets {
-        & .container {
+        /*
+        @include tablets {
             max-width: rem(768px);
         }
+        */
+        @include phones {
+            max-width: 100%;
+            padding: 0 5%;
+        }
     }
+
 }
 
 .hero .sections__title {    

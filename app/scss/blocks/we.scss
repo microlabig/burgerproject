@@ -4,11 +4,18 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        
+        padding: 0 5%;
 
-        max-width: rem(940px);
+        @include phones {
+            padding: 0;
+        }  
     }
     
     & .sections__title {
         margin-bottom: rem(56px);
+        @include phones {
+            margin-bottom: rem(24px);
+        }   
     }
 }
