@@ -14,10 +14,7 @@
 //Адаптивность
 // для планшетов 
 @mixin tablets() {
-    @media screen and (max-width: $tablets) {
-        @content;
-    }
-    @media print {
+    @media screen and (max-width: $tablets), print {
         @content;
     }
 }
