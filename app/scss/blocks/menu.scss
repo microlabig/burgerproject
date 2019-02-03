@@ -107,6 +107,7 @@
     align-items: flex-end;
     justify-content: center;
     position: relative;
+    cursor: pointer;
 
     @include bg(cover, center center);
     width: rem(80px);
