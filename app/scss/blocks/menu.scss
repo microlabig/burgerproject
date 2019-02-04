@@ -81,10 +81,10 @@
                 display: inline-block;
             }
         }
-        @include phones {
-            width: 100%;        
+        @include phones {                   
             position: absolute;
             z-index: 1;
+            width: 100%; 
         }  
     }   
 }
@@ -106,6 +106,7 @@
     @include phones {        
         position: absolute;
         z-index: 1;
+        width: 100%;
     }     
 }
 
