@@ -68,13 +68,25 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;    
-    &:hover .menu__item-description {
-        width: 100%;
-        transition: width .2s;
-    }    
-    &:hover .menu__item-title {
-        color: $yellow;
-    }
+    &:hover {        
+        .menu__item-description {
+            width: 100%;
+            transition: width .2s;                 
+        }                
+        .menu__item-title {
+            color: $yellow;        
+        } 
+        .menu__close {
+            @include phones {     
+                display: inline-block;
+            }
+        }
+        @include phones {
+            width: 100%;        
+            position: absolute;
+            z-index: 1;
+        }  
+    }   
 }
 
 .menu__item--active {
@@ -84,6 +96,11 @@
     }
     & .menu__item-title {
         color: $yellow;
+    }
+    & .menu__close {
+        @include phones {     
+            display: inline-block;
+        }
     }
     
     @include phones {        
@@ -151,7 +168,6 @@
 }
 
 .menu__item-text {    
-    position: relative;
     font-weight: $light;
     color: $white;
     line-height: rem(24px);
@@ -166,25 +182,18 @@
 }
 
 .menu__close {
+    z-index: 2;
     display: none;
-    @include phones {     
-        position: absolute;
-        display: inline-block;
+    position: absolute;    
 
-        width: rem(20px);
-        height: rem(20px);
+    width: rem(20px);
+    height: rem(20px);
 
-        background-image: url('../img/menu/close_menu.png');
-        @include bg(contain, center center);
+    background-image: url('../img/menu/close_menu.png');
+    @include bg(contain, center center);
 
-        top: rem(30px);
-        right: rem(30px);    
-    }
-}
-
-.menu__item-text-dummy {
-    width: 100%;
-    height: 50%;
+    top: rem(30px);
+    right: rem(30px);     
 }
 
 

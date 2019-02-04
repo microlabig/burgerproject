@@ -29,6 +29,9 @@
 }
 .menu{
     background: url('../img/menu/bg.jpg') center center / cover no-repeat;    
+    @include phones {
+        background-position: left 30% center;
+    }
 }
 .howwork{
     background: url('../img/howwork/bg.jpg') center center / cover no-repeat;

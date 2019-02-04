@@ -1,6 +1,6 @@
 /* copyright */
 
-.footer__copyright-street{
+.copyright-street{
     color:$white;
     font-size: inherit;
     font-weight: $light;
@@ -11,14 +11,14 @@
     }
 }
 
-.footer__copyright-number{
+.copyright-number{
     text-decoration: none;
     font-size: inherit;
     font-weight: $bold;
     color: $red;
 }
 
-.footer__copyright-phoneimage {
+.copyright-phoneimage {
     display: inline-block;
     
     width: rem(12px);
@@ -27,6 +27,6 @@
     margin-right: rem(6px);
 }
 
-.footer__copyright-phoneicon {
+.copyright-phoneicon {
     @include imgsize(contain);
 }
