@@ -33,6 +33,7 @@ Thumbs.db
 bower_components
 dist
 build
+.vscode
 
 # Node.JS
 node_modules
