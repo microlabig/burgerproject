@@ -3,8 +3,7 @@
     display: inline-block;
 
     flex-shrink: 0;  
-    @include tablets {
-        z-index: 1;   
+    @include tablets { 
         margin-left: rem(24px);
     }
     @include phones {           
@@ -24,5 +23,6 @@
 
 .logo__title{
     display: none;
+    visibility: hidden;
 }
 

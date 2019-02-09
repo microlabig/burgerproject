@@ -5,10 +5,10 @@
     z-index: 10;  
     @include tablets {
         top: rem(39px);
-        right: rem(5px);
+        right: rem(16px);
     }      
-    @include tablets {
-        right: rem(2px);
+    @include phones {
+        right: rem(10px);
     }   
 }
 
@@ -73,5 +73,22 @@
 
     &:last-child {
         margin-bottom: 0;
+    }
+}
+
+.open .button-nav__mobile__line {  
+    border-color: $phone-menu;      
+    &:first-child {
+        transform-origin: left 50%;
+        transform: rotate(45deg) ;
+        
+    }
+    &:nth-child(2) {
+        //display: none;
+        visibility: hidden;
+    }
+    &:last-child {
+        transform-origin: left 50%;
+        transform: rotate(-45deg) ;
     }
 }

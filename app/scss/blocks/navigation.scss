@@ -8,6 +8,13 @@
     }
 }
 
+.navigation__wrapper {
+    z-index: 1;
+    @include tablets {
+        display: none;
+    }
+}
+
 .navigation__list {
     display: flex;
     justify-content: center;
@@ -19,8 +26,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        display: none;
     }
 }
 
