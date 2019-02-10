@@ -1,18 +1,20 @@
-const items = document.querySelectorAll('.team__item');
+const teamItems = document.querySelectorAll('.team__item');
 
-for (item of items) {    
-    item.addEventListener('click', e=> {
-        const curItem = e.currentTarget;  
-        const name = curItem.querySelector('.team__name'); 
+for (item of teamItems) {
+    item.addEventListener('click', e => {
+        const curItem = e.currentTarget;
+        const name = curItem.querySelector('.team__name');
 
-        Array.from(items).forEach(elem => {
-            elem.classList.remove('is-active');
-            if (elem.querySelector('.team__name').classList.contains('team__name--opened')) {
-                elem.querySelector('.team__name').classList.remove('team__name--opened');
-            } 
-        })
-                
-        curItem.classList.toggle('is-active');        
-        name.classList.toggle('team__name--opened');        
+        if (curItem.classList.contains('is-active')) {
+            curItem.classList.remove('is-active');
+            name.classList.remove('team__name--opened');
+        } else {
+            Array.from(teamItems).forEach(elem => {
+                elem.classList.remove('is-active');
+                name.classList.remove('team__name--opened');
+            });
+            curItem.classList.add('is-active');
+            name.classList.add('team__name--opened');
+        }
     });
 }
