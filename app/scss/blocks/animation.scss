@@ -10,4 +10,22 @@
     to {
         transform: translateY(0px);
     }    
-  }
+}
+
+
+@keyframes slideInUpRight {
+    from {
+        transform: translate3d(100%, -50%, 0);
+        visibility: visible;
+        opacity: 0;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+        opacity: 1;
+    }    
+}
+.slideInUpRight {
+    animation: slideInUpRight .3s;
+}

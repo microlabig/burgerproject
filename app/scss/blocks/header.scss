@@ -11,7 +11,7 @@
     }
 }
 
-.header__button {
+.header__button {    
     @include tablets {
         margin-right: rem(44px);
     }

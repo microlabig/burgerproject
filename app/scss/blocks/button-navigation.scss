@@ -71,10 +71,12 @@
     border: 2px solid $white;
     margin-bottom: rem(5px);
     border-radius: 2px;
+    background-color: $white;
 
     &:last-child {
-        margin-bottom: 0;
+        margin-bottom: 0;        
     }
+    transition: .4s;
 }
 
 // когда щелкнули по меню
@@ -83,7 +85,8 @@
 }
 
 .open .button-nav__mobile-line {  
-    border-color: $phone-menu;    
+    border-color: $phone-menu;   
+    background-color: $phone-menu; 
     &:first-child {
         transform-origin: left 50%;
         transform: rotate(45deg) ;
@@ -91,6 +94,7 @@
     }
     &:nth-child(2) {
         //display: none;
+        opacity: 0;
         visibility: hidden;
     }
     &:last-child {
