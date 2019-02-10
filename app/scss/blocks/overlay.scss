@@ -18,7 +18,8 @@
     & .logo {
         position: absolute;
         margin-top: rem(13px);
-        margin-left: rem(24px); 
+        margin-left: rem(24px);
+        cursor: pointer; 
     }
 
     & .navigation__wrapper {

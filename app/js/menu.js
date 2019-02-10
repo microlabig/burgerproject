@@ -45,7 +45,8 @@ var btnmenu_click = btnmenu.addEventListener('click', e=> {
     overlay.classList.toggle('active');
     overlay.children[0].style.top = `${window.pageYOffset}px`;    
     btnmenu.classList.toggle('open');
-    startMenuAnimation();
+    
+    startMenuAnimation();    
 });
 
 // клик по ссылке
@@ -55,6 +56,7 @@ nav.addEventListener('click', e=> {
         overlay.classList.toggle('active');
         btnmenu.classList.toggle('open');
         body.style.overflow = 'initial';
+        startMenuAnimation(); 
     }    
 });
 
