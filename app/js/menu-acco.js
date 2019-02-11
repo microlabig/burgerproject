@@ -1,27 +1,31 @@
+const menulist = document.querySelector('.menu__list');
 const menuitems = document.querySelectorAll('.menu__item');
 
-for (item of menuitems) {
-    item.addEventListener('click', e => {
-        const curItem = e.currentTarget;
-
+menulist.addEventListener('click', e => {
+    let target = e.target;    
+    
+    // открытие аккордеона
+    if (target.classList.contains('menu__item-title-block')) { 
+        const curItem = target.parentNode;       
         if (curItem.classList.contains('menu__item--active')) {
             curItem.classList.remove('menu__item--active');
-        } else {
+        } else {            
             Array.from(menuitems).forEach(elem => {
                 elem.classList.remove('menu__item--active');
-            });
+            });            
             curItem.classList.add('menu__item--active');
         }
-    });
-}
-
-
-const menuClose = document.querySelectorAll('.menu__close');
-for (itemClose of menuClose) {
-    itemClose.addEventListener('click', e => {
-        const curr = e.currentTarget;
-        curr.classList.remove('menu__item--active');
-
+        return;
+    }
+    // закрытие аккордеона
+    if (target.classList.contains('menu__close')) {
+        let curItem = target.parentNode;        
+        while (curItem.tagName != 'LI') {
+            curItem = curItem.parentNode;
+        }        
+        curItem.classList.remove('menu__item--active');
         e.preventDefault();
-    });
-}
+    }
+});
+
+
