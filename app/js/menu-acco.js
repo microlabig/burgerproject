@@ -7,6 +7,7 @@ menulist.addEventListener('click', e => {
     // открытие аккордеона
     if (target.classList.contains('menu__item-title-block')) { 
         const curItem = target.parentNode;       
+
         if (curItem.classList.contains('menu__item--active')) {
             curItem.classList.remove('menu__item--active');
         } else {            
@@ -19,10 +20,12 @@ menulist.addEventListener('click', e => {
     }
     // закрытие аккордеона
     if (target.classList.contains('menu__close')) {
-        let curItem = target.parentNode;        
+        let curItem = target.parentNode;       
+
         while (curItem.tagName != 'LI') {
             curItem = curItem.parentNode;
         }        
+        
         curItem.classList.remove('menu__item--active');
         e.preventDefault();
     }
