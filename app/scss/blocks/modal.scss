@@ -1,0 +1,34 @@
+.modal {    
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: $bgmenu;   
+}
+
+.modal__container {  
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+}
+
+.modal__wrapper {
+    max-width: rem(400px);
+    background-color: $white;
+    border-radius: rem(4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    overflow: hidden;
+    padding: rem(20px);
+}
+
+.modal__text {
+    margin-bottom: rem(15px);
+}
