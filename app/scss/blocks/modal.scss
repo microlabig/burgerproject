@@ -1,34 +1,91 @@
-.modal {    
+.modal {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     width: 100%;
     left: 0;
     right: 0;
     bottom: 0;
     top: 0;
-    background-color: $bgmenu;   
+    
+    & .modal__message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } 
+    & .modal__reviews {
+        display: none;
+    } 
+    
+    // для блока reviews
+    &.reviews {
+        & .modal__message {
+            display: none;
+        } 
+        & .modal__reviews {
+            display: initial;
+            position: relative;
+        } 
+
+        & .modal__wrapper {
+            align-items: flex-start;
+        }
+        & .reviews__name,
+        & .reviews__text {
+            margin-bottom: 0;
+        }
+        & .reviews__name {
+            margin-top:rem(10px);
+            margin-bottom: rem(30px);
+            margin-right: rem(20px);
+        }     
+
+        & .modal__message-btn-cross {            
+            position: absolute;
+            right: 0;            
+            width: rem(15px);
+            height: rem(15px);
+            transform: rotate(45deg);
+        }
+        & .btn-cross__line {
+            @include centered(absolute, 'both');
+            display: inline-block;
+            width: 100%;
+            border: 2px solid $cross-menu;
+            border-radius: 2px;
+            background-color: $cross-menu;
+        }
+        & .btn-cross__line:last-child {
+            left: 0;
+            transform: rotate(90deg) translateX(-13%);
+        }
+    }
 }
 
-.modal__container {  
+.modal__container {
+    background-color: $bgmenu;
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;     
+    align-items: center;
 }
 
 .modal__wrapper {
+    position: relative;
     max-width: rem(400px);
     background-color: $white;
     border-radius: rem(4px);
     display: flex;
     flex-direction: column;
-    justify-content: center;    
+    justify-content: center;
     align-items: center;
     overflow: hidden;
     padding: rem(20px);
 }
 
-.modal__text {
+.modal__message-text {
+    text-align: center;
+    display: initial;
+    visibility: visible;
     margin-bottom: rem(15px);
 }

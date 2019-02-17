@@ -308,6 +308,7 @@
                                     </div>
                                 </div>
                             </li>
+                            
                         </ul>
 
                         <a class="burgers__auto-scroll burgers__auto-scroll--right">
@@ -489,7 +490,7 @@
                         <li style="background-image: url(./img/reviews/chel1.jpg)" class="reviews__item">
                             <div class="reviews__description">
                                 <div class="reviews__description-block">
-                                    <h4 class="reviews__name">Константин Спилберг</h4>
+                                    <h4 class="reviews__name">Джессика Соколова</h4>
                                     <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
                                         невозможно
                                         забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка
@@ -525,7 +526,7 @@
                         <li style="background-image: url(./img/reviews/chel3.jpg)" class="reviews__item">
                             <div class="reviews__description">
                                 <div class="reviews__description-block">
-                                    <h4 class="reviews__name">Константин Спилберг</h4>
+                                    <h4 class="reviews__name">Анна Иванова</h4>
                                     <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
                                         невозможно
                                         забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка
@@ -543,7 +544,7 @@
                         <li style="background-image: url(./img/reviews/chel4.jpg)" class="reviews__item">
                             <div class="reviews__description">
                                 <div class="reviews__description-block">
-                                    <h4 class="reviews__name">Константин Спилберг</h4>
+                                    <h4 class="reviews__name">Николо Маккиавели</h4>
                                     <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
                                         невозможно
                                         забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка
@@ -561,7 +562,7 @@
                         <li style="background-image: url(./img/reviews/chel5.jpg)" class="reviews__item">
                             <div class="reviews__description">
                                 <div class="reviews__description-block">
-                                    <h4 class="reviews__name">Константин Спилберг</h4>
+                                    <h4 class="reviews__name">Арнольд Шварценеггер</h4>
                                     <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
                                         невозможно
                                         забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка
@@ -579,7 +580,7 @@
                         <li style="background-image: url(./img/reviews/chel6.jpg)" class="reviews__item">
                             <div class="reviews__description">
                                 <div class="reviews__description-block">
-                                    <h4 class="reviews__name">Константин Спилберг</h4>
+                                    <h4 class="reviews__name">Людмила Третьякова</h4>
                                     <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
                                         невозможно
                                         забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка
@@ -597,7 +598,7 @@
                         <li style="background-image: url(./img/reviews/chel7.jpg)" class="reviews__item">
                             <div class="reviews__description">
                                 <div class="reviews__description-block">
-                                    <h4 class="reviews__name">Константин Спилберг</h4>
+                                    <h4 class="reviews__name">Джеки Чан-старший</h4>
                                     <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
                                         невозможно
                                         забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка
@@ -615,7 +616,7 @@
                         <li style="background-image: url(./img/reviews/chel8.jpg)" class="reviews__item">
                             <div class="reviews__description">
                                 <div class="reviews__description-block">
-                                    <h4 class="reviews__name">Константин Спилберг</h4>
+                                    <h4 class="reviews__name">Джейк Джилленхол</h4>
                                     <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
                                         невозможно
                                         забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка
@@ -669,16 +670,18 @@
             <section id="form" class="sections form">
                 <div class="container">
                     <h1 class="sections__title sections__title--yellow">Закажите доставку</h1>
-                    <form action="#" class="form__wrapper">
+                    <form action="#" class="form__wrapper" name="formrequest">
                         <div class="form__content">
                             <div class="form__row form__row--contacts">
                                 <label class="form__elem">
                                     <div class="form__elem-title">Имя</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="name" required>
+                                    <div class="error"></div>
                                 </label>
                                 <label class="form__elem">
                                     <div class="form__elem-title">Телефон</div>
-                                    <input type="text" class="form__input" placeholder="89212264923">
+                                    <input type="text" class="form__input" placeholder="89212264923" name="phone" required>
+                                    <div class="error"></div>
                                 </label>
                             </div>
                             <div class="form__row">
@@ -710,7 +713,8 @@
                             <div class="form__row">
                                 <label class="form__elem">
                                     <div class="form__elem-title">Комментарий</div>
-                                    <textarea class="form__input form__textarea"></textarea>
+                                    <textarea class="form__input form__textarea" name="comment" required></textarea>
+                                    <div class="error"></div>
                                 </label>
                             </div>
                             <div class="form__radio">
@@ -739,15 +743,7 @@
                                 <button type="reset" class="button button--reset">Очистить</button>
                             </div>
                         </div>
-                    </form>
-                    <div class="modal">
-                        <div class="modal__container">
-                            <div class="modal__wrapper">
-                                <p class="modal__text">Сообщение отправлено</p>
-                                <a href="#" class="button button--modal">Закрыть</a>
-                            </div>
-                        </div>
-                    </div>
+                    </form>                    
                 </div>
             </section>
 
@@ -805,10 +801,30 @@
 
     </div>
 
+    <div class="modal">
+        <div class="modal__container">
+            <div class="modal__wrapper">
+                <div class="modal__message">
+                    <p class="modal__message-text"></p>                    
+                    <a href="#" class="button button--modal">Закрыть</a> 
+                </div>
+                <div class="modal__reviews">
+                    <a href="#" class="modal__message-btn-cross">
+                        <div class="btn-cross__line"></div>
+                        <div class="btn-cross__line"></div>
+                    </a>
+                    <h4 class="reviews__name"></h4>
+                    <div class="reviews__text"></div>
+                </div>                                  
+            </div>
+        </div>
+    </div>
+
     <script src="./js/menu.js"></script>
     <script src="./js/team-acco.js"></script>
     <script src="./js/menu-acco.js"></script>
     <script src="./js/button-navigation.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>

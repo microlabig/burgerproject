@@ -255,6 +255,10 @@
     }
 }
 
+.button--form {
+    z-index: 10;
+}
+
 .button--reset {
     background-color: transparent;
     &:hover {
@@ -262,3 +266,9 @@
     }
 }
 
+// error
+
+.error {
+    color: $red;
+    font-weight: $bold;
+}
