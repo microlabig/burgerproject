@@ -1,3 +1,9 @@
+.burgers .container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .burgers__slider{
     position: relative;
     
@@ -6,19 +12,39 @@
 
     flex: 1;
 
-    max-width: rem(1010px);    
-    margin: 0 auto;    
+    //max-width: rem(1010px);    
+    width: 90%;
+    //margin: 0 auto;   
+    overflow: hidden; 
+}
+
+.burgers__list {
+    position: relative;
+    right: 0px;
+    display: flex;
+    flex-direction:row;
+    width:100%;
+    transition: right 0.3s;    
 }
 
 .burger__item {
-    display: flex;
+    flex-shrink: 0;
+    width:100%;
+    display:flex;    
+    justify-content: center;
     flex-wrap: nowrap;
-    //max-width: rem(640px);
+    position: relative;    
+    //max-width: rem(980px);
     @include tablets {
         flex-wrap: wrap;
         flex-direction: column;
+        align-items: center;
         max-width: rem(596px);
     }
+    /*
+    &.active {
+        display:flex;
+    } */
 }
 
 .burgers__description,
@@ -29,8 +55,10 @@
 .burgers__images-block {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     flex:1;
+    max-width: rem(450px);
     @include tablets {
         display: flex;
         flex-wrap: nowrap;
@@ -64,18 +92,30 @@
     overflow: hidden;
     cursor: pointer;
 
-    right:98%;  
-    
-    @include phones {
+    right:96%;
+
+    @include tablets {
         right:95%; 
+    }
+    @include phones {
+        right:93%; 
+    }
+    @include phones-small {
+        right:90%; 
     }
 }
 .burgers__auto-scroll--right{
     transform: rotate(-90deg);
-    left:98%;
-    @include phones {
+    left:96%;
+    @include tablets {
         left:95%; 
     }
+    @include phones {
+        left:93%; 
+    }   
+    @include phones-small {
+        left:90%; 
+    } 
 }
 
 .burgers__composition-block{
@@ -135,8 +175,8 @@
 }
 
 .burgers__img-block{
-    max-width: rem(505px);
-    max-height: rem(329px);
+    max-width: rem(1000px);
+    max-height: rem(796px);
     overflow: hidden;    
 }
 
@@ -298,6 +338,7 @@
 .burgers__description{
     flex:1;
     color: $white;
+    max-width: rem(450px);
     @include tablets {       
         text-align: center;
 
