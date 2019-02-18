@@ -13,8 +13,7 @@ const itemCounter = list.children.length;
 
 window.addEventListener('resize',function(){
     let currRight = 0;
-    currWidth = parseInt(getComputedStyle(list.children[0]).width);
-    console.log("resize currWidth = "+currWidth);
+    currWidth = parseInt(getComputedStyle(list.children[0]).width);    
     list.style.right = currRight;
 }, true);
 
@@ -31,8 +30,12 @@ left.addEventListener('click',e=>{
             list.children[currItem].classList.add('active');
         }
         */
+    } else {
+        currRight = (itemCounter-1)*currWidth;
+        list.style.right = currRight+ "px";
     }
 });
+
 
 right.addEventListener('click',e=>{
     e.preventDefault();
@@ -47,6 +50,9 @@ right.addEventListener('click',e=>{
             list.children[currItem].classList.add('active');
         }
         */
+    } else {
+        currRight = 0;
+        list.style.right = currRight;
     }
 });
 
