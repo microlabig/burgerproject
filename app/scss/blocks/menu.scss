@@ -93,8 +93,8 @@
 
 .menu__item--active {
     & .menu__item-description {
-        width: 100%;
-        transition: width .2s;
+        width: 100%; 
+        transition: width .2s;       
     }
     & .menu__item-title {
         color: $yellow;
@@ -104,12 +104,15 @@
             display: inline-block;
         }
     }
-    
+    & .menu__item-text {
+        opacity: 1;
+        transition: opacity .5s;
+    }
     @include phones {        
         position: absolute;
         z-index: 1;
-        width: 100%;
-    }     
+        width: 100%;                
+    }         
 }
 
 .menu__item-title--weat {
@@ -167,7 +170,7 @@
 .menu__item-description {    
     width: 0;
     height: 100%;
-    background-color: rgba(51, 51, 51, .95);
+    background-color: rgba(51, 51, 51, .95);    
 }
 
 .menu__item-text {    
@@ -177,8 +180,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: 100%;    
     padding: rem(60px) rem(35px); 
+    opacity: 0;
     @include phones-small{
         padding: rem(60px) rem(15px);
     }    

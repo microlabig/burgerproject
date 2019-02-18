@@ -88,7 +88,7 @@ for (button of reviewsButtons) {
         const target = e.target;
 
         modal.set('r');
-        modal.text(target.parentNode.parentNode.querySelector('.reviews__name').innerText, target.parentNode.parentNode.querySelector('.reviews__text').innerText);
+        modal.text(target.parentNode.parentNode.querySelector('.reviews__name').innerText, target.parentNode.parentNode.querySelector('.reviews__text').innerText);        
         modal.show();
     });
 }

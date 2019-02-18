@@ -128,6 +128,9 @@
 .form__textarea {
     height: rem(110px);
     resize: none;
+    @include phones {
+        height: rem(80px);
+    }
 }
 
 .floor {

@@ -29,6 +29,9 @@
 
         & .modal__wrapper {
             align-items: flex-start;
+            @include phones {
+                max-width: 90%;
+            }
         }
         & .reviews__name,
         & .reviews__text {
@@ -38,7 +41,12 @@
             margin-top:rem(10px);
             margin-bottom: rem(30px);
             margin-right: rem(20px);
-        }     
+        }    
+        & .reviews__text {
+            @include phones{
+                display: initial;
+            }
+        } 
 
         & .modal__message-btn-cross {            
             position: absolute;

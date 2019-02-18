@@ -64,7 +64,7 @@
         flex-wrap: nowrap;
         flex-direction: row;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
     }
 }
 
@@ -140,18 +140,27 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;  
+    align-items: center; 
 
-    &:hover {
+    //&:hover {
+    &.active {    
         background-color:$light-orange;
         transition: .4s;
+        .burgers__charackters-block {
+            opacity: 1;
+            visibility: visible;
+            left:100%;
+            transition: opacity .4s;
+        }   
     }
-    &:hover .burgers__charackters-block {
+/*
+    &:hover .burgers__charackters-block  {
         opacity: 1;
         visibility: visible;
         left:100%;
         transition: opacity .4s;
     }   
+*/
     @include tablets {        
         top: 0;
         left:0;
@@ -237,10 +246,10 @@
         width: rem(322px);
     }  
     @include phones {
-        width: rem(372px);
+        width: rem(252px);
     }  
     @include phones-small {
-        width: rem(260px);
+        width: rem(240px);
     }  
 }
 
@@ -308,15 +317,17 @@
 .burgers__charakter-cross {
     top:rem(20px);
     right: rem(20px);
-    margin-left: rem(24px);
+    //margin-left: rem(24px);
     display: none;
     @include tablets {
         display: initial;
         position: relative;
-        width: 24px;
-        height: 24px;
-        transform: rotate(45deg); 
-    }    
+        width: rem(24px);
+        height: rem(24px);
+        transform: rotate(45deg);
+        top: rem(11px);
+        right: rem(11px); 
+    }       
 }
 .burgers__charakter-cross-line {    
     border: 2px solid $cross-menu;
