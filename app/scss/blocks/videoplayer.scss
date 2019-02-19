@@ -2,8 +2,9 @@
     @include tablets{
         max-width: rem(720px);
     }    
-    @include tablets{
-        max-width: rem(460px);
+    @include phones{
+        //max-width: rem(460px);
+        width: 98.7%;
     }    
 }
 
@@ -11,20 +12,18 @@
     position: relative;
 }
 
-.videoplayer__img-block {
-    max-width: 100%;
+.videoplayer__image {
+    width: 100%;
     height: 100%;
-    overflow: hidden; 
-     
+    overflow: hidden;      
 }
 
-.videoplayer__image {
+.videoplayer__image-block {
+    display: block;
     @include imgsize(contain);
 }
 
 .videoplayer__play {
-    position: absolute;
-    cursor: pointer;  
     
     width: rem(82px);
     height: rem(118px);
@@ -32,12 +31,12 @@
     @include centered(absolute, 'both');
     fill: $white;
     opacity: 0.9;
+    
     @include tablets {
         fill: $black;
         opacity: 0.9;
     }
 }
-
 
 
 /* player */
@@ -52,20 +51,15 @@
     max-width: 100%;
     height: rem(35px);
 
-    background-color: $light-gray;   
+    background-color: $light-gray; 
+
+    @include tablets {
+        justify-content: space-evenly;
+    }    
+    
     @include phones {
         height: rem(28px);
     } 
-}
-
-.videoplayer__play--control { 
-    fill:$button-control;
-    @include centered(initial, 'y');
-    width: rem(16px);
-    height: rem(22px);
-    @include tablets{
-        fill:$button-control;
-    }
 }
 
 .videoplayer__playicon {
@@ -73,30 +67,34 @@
     max-height: 100%;
 }
 
+.videoplayer__play--control { 
+    fill:$button-control;
+
+    width: rem(16px);
+    height: rem(22px);
+}
+
 .videoplayer__shkala {
     cursor: pointer;
-
     position: relative;
+
     @include btn-shkala(rem(444px));
+
     &:before {        
         @include btn-control(rem(13px));
-        margin-left: rem(73px);        
+        left: rem(73px);        
     }
+
     @include tablets{
-        width: rem(602px);
-    }
-    @include phones {
-        width: rem(386px);
+        width: 85%;
+        //width: rem(600px);
     }
 }
 
 .videoplayer__volume {
-    cursor: pointer;
-
     width: rem(18px);
     height: rem(22px);
 }
-
 .videoplayer__volumeicon {
     max-width: 100%;
     max-height: 100%;
@@ -106,6 +104,7 @@
     cursor: pointer;
 
     @include btn-shkala(rem(58px));
+
     &:before {
         @include btn-control(rem(13px));
         right: rem(10px);
