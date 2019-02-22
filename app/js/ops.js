@@ -11,10 +11,10 @@ $(document).ready(function () { //дождемся загрузки докуме
             content = $(".content"), //родителя-обертку
             position = 0, //для смещения            
             IsScroll = false, //для определения статуса прокрутки
-            contentHeight = parseInt(content.css("height")), //высота всего контента
-            currHeight = parseInt(sections.css("height")), //текущая высота
+            contentHeight = parseFloat(content.css("height")), //высота всего контента
+            currHeight = parseFloat(sections.css("height")), //текущая высота
             currItem = 0; //текущая секция
-
+            
         const length = sections.length; //количество секций        
 
 
@@ -44,7 +44,7 @@ $(document).ready(function () { //дождемся загрузки докуме
 
         // при ресайзе переопределяем высоту секции
         window.addEventListener('resize', function () {
-            currHeight = parseInt(sections.css("height"));
+            currHeight = parseFloat(sections.css("height"));
         }, true);
 
         //определяем предыдущую и следующую секцию
@@ -75,9 +75,8 @@ $(document).ready(function () { //дождемся загрузки докуме
         let performTransition = function (index) {
             if (!IsScroll) {
                 IsScroll = true;
-                position = index * -(currHeight) + "px";
-
-                if ((parseInt(position) * -1 <= contentHeight) && (parseInt(position) * -1 >= 0)) { //если не зашли за пределы
+                position = index * -(currHeight) + "px"; 
+                if ((parseFloat(position) * -1 <= contentHeight) && (parseFloat(position) * -1 >= 0)) { //если не зашли за пределы
                     content.css({
                         transform: `translateY(${position})`,
                         "-webkit-transform": `translateY(${position})`
@@ -153,7 +152,7 @@ $(document).ready(function () { //дождемся загрузки докуме
         $("[data-scroll-to]").on("click", e => {
             e.preventDefault();
             currItem = $(e.target).data("scroll-to");
-            performTransition(parseInt(currItem));            
+            performTransition(parseFloat(currItem));            
         });
 
     };

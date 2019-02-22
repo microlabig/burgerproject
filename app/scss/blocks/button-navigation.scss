@@ -52,7 +52,7 @@
 .button-nav__item--active:after {
     @include circle_fixed;
     border-color: $white;   
-    transition: .3s; 
+    transition: .4s; 
 }
 
 // mobile button navigation
