@@ -14,50 +14,12 @@
 
     <div class="wrapper">
 
+        <div class="section overlay">
+                <div class="container">        
+                </div>
+        </div>
+
         <main class="content">
-
-            <div class="button-nav">
-                <div class="button-nav__mobile">
-                    <div class="button-nav__mobile-line"></div>
-                    <div class="button-nav__mobile-line"></div>
-                    <div class="button-nav__mobile-line"></div>
-                </div>
-                <ul class="button-nav__list">
-                    <li class="button-nav__item button-nav__item--active">
-                        <a href="#hero" class="button-nav__dot"></a>
-                    </li>
-                    <li class="button-nav__item">
-                        <a href="#we" class="button-nav__dot"></a>
-                    </li>
-                    <li class="button-nav__item">
-                        <a href="#burgers" class="button-nav__dot"></a>
-                    </li>
-                    <li class="button-nav__item">
-                        <a href="#team" class="button-nav__dot"></a>
-                    </li>
-                    <li class="button-nav__item">
-                        <a href="#menu" class="button-nav__dot"></a>
-                    </li>
-                    <li class="button-nav__item">
-                        <a href="#reviews" class="button-nav__dot"></a>
-                    </li>
-                    <li class="button-nav__item">
-                        <a href="#howwork" class="button-nav__dot"></a>
-                    </li>
-                    <li class="button-nav__item">
-                        <a href="#form" class="button-nav__dot"></a>
-                    </li>
-                    <li class="button-nav__item">
-                        <a href="#contacts" class="button-nav__dot"></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="section overlay">
-                <div class="container">
-
-                </div>
-            </div>
 
             <section id="hero" class="sections hero">
                 <div class="container">
@@ -74,30 +36,30 @@
                             <nav class="navigation__wrapper">
                                 <ul class="navigation__list">
                                     <li class="navigation__item">
-                                        <a href="#we" class="navigation__text">О&nbsp;нас</a>
+                                        <a href="#" data-scroll-to="1" class="navigation__text">О&nbsp;нас</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#burgers" class="navigation__text">Бургеры</a>
+                                        <a href="#" data-scroll-to="2" class="navigation__text">Бургеры</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#team" class="navigation__text">Команда</a>
+                                        <a href="#" data-scroll-to="3" class="navigation__text">Команда</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#menu" class="navigation__text">Меню</a>
+                                        <a href="#" data-scroll-to="4" class="navigation__text">Меню</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#reviews" class="navigation__text">Отзывы</a>
+                                        <a href="#" data-scroll-to="5" class="navigation__text">Отзывы</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#howwork" class="navigation__text">Как&nbsp;мы&nbsp;работаем</a>
+                                        <a href="#" data-scroll-to="6" class="navigation__text">Как&nbsp;мы&nbsp;работаем</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#contacts" class="navigation__text">Контакты</a>
+                                        <a href="#" data-scroll-to="8" class="navigation__text">Контакты</a>
                                     </li>
                                 </ul>
                             </nav>
-                            <div class="header__button">
-                                <a href="#form" class="button">Заказать</a>
+                            <div class="header__button" data-scroll-to="7">
+                                <a href="#" class="button">Заказать</a>
                             </div>
                         </div>
                     </header>
@@ -110,8 +72,8 @@
                             <h3 class="sections__slogan-title2">натуральные бургеры</h3>
                         </div>
                     </div>
-                    <div class="arrow-scroll__block">
-                        <a href="#we" class="arrow-scroll__link">
+                    <div data-scroll-to="1" class="arrow-scroll__block">
+                        <a href="#" class="arrow-scroll__link">
                             <svg class="arrow-scroll__icon">
                                 <use xlink:href="./img/sprite.svg#arrow-scroll"></use>
                             </svg>
@@ -1302,6 +1264,45 @@
 
     </div>
 
+    <div class="button-nav">
+        <div class="button-nav__mobile">
+            <div class="button-nav__mobile-line"></div>
+            <div class="button-nav__mobile-line"></div>
+            <div class="button-nav__mobile-line"></div>
+        </div>
+        <ul class="button-nav__list">
+        <!--
+            <li class="button-nav__item button-nav__item--active">
+                <a href="#" class="button-nav__dot"></a>
+            </li>
+            <li class="button-nav__item">
+                <a href="#" class="button-nav__dot"></a>
+            </li>
+            <li class="button-nav__item">
+                <a href="#" class="button-nav__dot"></a>
+            </li>
+            <li class="button-nav__item">
+                <a href="#" class="button-nav__dot"></a>
+            </li>
+            <li class="button-nav__item">
+                <a href="#" class="button-nav__dot"></a>
+            </li>
+            <li class="button-nav__item">
+                <a href="#" class="button-nav__dot"></a>
+            </li>
+            <li class="button-nav__item">
+                <a href="#" class="button-nav__dot"></a>
+            </li>
+            <li class="button-nav__item">
+                <a href="#" class="button-nav__dot"></a>
+            </li>
+            <li class="button-nav__item">
+                <a href="#" class="button-nav__dot"></a>
+            </li>
+        -->
+        </ul>
+    </div>   
+
     <div class="modal">
         <div class="modal__container">
             <div class="modal__wrapper">
@@ -1322,7 +1323,10 @@
     </div>
 
     <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
     
+    <script src="./js/ops.js"></script>    
     <script src="./js/menu.js"></script>
     <script src="./js/team-acco.js"></script>
     <script src="./js/menu-acco.js"></script>

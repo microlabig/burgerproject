@@ -24,6 +24,7 @@ body {
 html,
 body {
     height: 100%;
+    overflow: hidden;
 }
 
 ul {
@@ -67,10 +68,14 @@ h3 {
 .wrapper {
     overflow: hidden;
     position: relative;
+    touch-action: none;
 }
 
 .content {
-    width: 100%;   
+    width: 100%; 
+    height: 100%;
+    transition: transform 0.7s;
+    will-change: transform;
 }
 
 .button {
