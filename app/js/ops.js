@@ -152,6 +152,12 @@ $(document).ready(function () { //дождемся загрузки докуме
             performTransition(parseFloat(currItem));            
         });
 
+
+
+        performTransition(6);
+
+
+
     };
     OnePageScroll();
 });
