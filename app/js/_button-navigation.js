@@ -1,4 +1,5 @@
 // Навигация по точкам
+/*
 const btnList = document.querySelector('.button-nav__list').children;
 
 for (item of btnList) {
@@ -35,5 +36,5 @@ let compositionVisible = () => {
     });
 };
 compositionVisible();
-
+*/
 // 

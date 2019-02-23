@@ -22,7 +22,7 @@
         <main class="content">
 
             <section id="hero" class="sections hero">
-                <div class="container">
+                <div class="container">                        
                     <header class="header">
                         <div class="logo">
                             <a href="./index.html" class="logo__link">
@@ -1212,11 +1212,9 @@
 
             <section id="contacts" class="sections contacts">
                 <div class="container">
-                    <div class="map">
-                        <div class="map__img">
-                            <img src="./img/contacts/map.jpg" alt="Map" class="map__img-block">
-                        </div>
-                    </div>
+                    <div class="map">                        
+                        <div id="map" class="map"></div>
+                    </div> 
                     <footer class="footer">
                         <div class="footer__wrapper">
                             <div class="copyright">
@@ -1270,36 +1268,7 @@
             <div class="button-nav__mobile-line"></div>
             <div class="button-nav__mobile-line"></div>
         </div>
-        <ul class="button-nav__list">
-        <!--
-            <li class="button-nav__item button-nav__item--active">
-                <a href="#" class="button-nav__dot"></a>
-            </li>
-            <li class="button-nav__item">
-                <a href="#" class="button-nav__dot"></a>
-            </li>
-            <li class="button-nav__item">
-                <a href="#" class="button-nav__dot"></a>
-            </li>
-            <li class="button-nav__item">
-                <a href="#" class="button-nav__dot"></a>
-            </li>
-            <li class="button-nav__item">
-                <a href="#" class="button-nav__dot"></a>
-            </li>
-            <li class="button-nav__item">
-                <a href="#" class="button-nav__dot"></a>
-            </li>
-            <li class="button-nav__item">
-                <a href="#" class="button-nav__dot"></a>
-            </li>
-            <li class="button-nav__item">
-                <a href="#" class="button-nav__dot"></a>
-            </li>
-            <li class="button-nav__item">
-                <a href="#" class="button-nav__dot"></a>
-            </li>
-        -->
+        <ul class="button-nav__list">        
         </ul>
     </div>   
 
@@ -1325,14 +1294,18 @@
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
-    
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=8066e43a-c6e4-462b-aa8e-77c5f4b44a9d&lang=ru_RU" type="text/javascript">
+    </script>
+
     <script src="./js/ops.js"></script>    
     <script src="./js/menu.js"></script>
     <script src="./js/team-acco.js"></script>
     <script src="./js/menu-acco.js"></script>
-    <script src="./js/button-navigation.js"></script>
+    
     <script src="./js/modal.js"></script>
     <script src="./js/slider.js"></script>
+
+    <script src="./js/map.js"></script>
 </body>
 
 </html>

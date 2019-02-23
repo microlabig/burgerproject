@@ -1,4 +1,4 @@
-.map {    
+/*.map {    
     flex: 1;
 }
 
@@ -13,4 +13,37 @@
     height: 100%;
 
     object-fit: cover;
+}
+*/
+.map {
+	height: 100%;
+    width: 100%;    
+}
+
+.map__hint {
+    padding: rem(10px);
+    min-height: rem(25px);
+    min-width: rem(125px);
+    font-size: rem(16px);
+	line-height: rem(25px);
+	color: $white;
+    background-color: $light-orange;
+	background-image: linear-gradient(to top, #ecc175 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+	border-radius: 5px;
+}
+
+.map__balloon {
+	padding: rem(20px);
+	font-size: rem(30px);
+	line-height: 1;
+	color: $white;
+	background-color: $light-orange;
+	background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+	border-radius: 20px;
+}
+
+.map__burger-img {
+	float: right;
+	height: rem(100px);
+	width: rem(100px);
 }
