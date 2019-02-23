@@ -11,12 +11,9 @@ $(document).ready(function () { //дождемся загрузки докуме
             content = $(".content"), //родителя-обертку
             position = 0, //для смещения            
             IsScroll = false, //для определения статуса прокрутки
-            contentHeight = parseFloat(content.css("height")), //высота всего контента
-            currHeight = parseFloat(sections.css("height")), //текущая высота
             currItem = 0; //текущая секция
             
-        const length = sections.length; //количество секций        
-
+        const length = sections.length; //количество секций   
 
         //создадим динамически белые точки-навигации
         let createWhitedot = function (scrollto) {
@@ -41,12 +38,12 @@ $(document).ready(function () { //дождемся загрузки докуме
         };
         createDotnavigation(length);
         $(".button-nav__item").first().addClass("button-nav__item--active");        
-
+/*
         // при ресайзе переопределяем высоту секции
         window.addEventListener('resize', function () {
             currHeight = parseFloat(sections.css("height"));
         }, true);
-
+*/
         //определяем предыдущую и следующую секцию
         let defineSections = function (sections) {
             let section = sections.eq(currItem);
@@ -75,13 +72,13 @@ $(document).ready(function () { //дождемся загрузки докуме
         let performTransition = function (index) {
             if (!IsScroll) {
                 IsScroll = true;
-                position = index * -(currHeight) + "px"; 
-                if ((parseFloat(position) * -1 <= contentHeight) && (parseFloat(position) * -1 >= 0)) { //если не зашли за пределы
+                position = index * -100 + "%"; 
+                //if ((parseFloat(position) * -1 <= contentHeight) && (parseFloat(position) * -1 >= 0)) { //если не зашли за пределы
                     content.css({
                         transform: `translateY(${position})`,
                         "-webkit-transform": `translateY(${position})`
                     });
-                }
+                //}
                 setTimeout(function () {
                     //Делаем задержку в 1s, пока функция setTimeout не выполнится inscroll будет равен true
                     IsScroll = false;
