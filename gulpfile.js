@@ -51,9 +51,16 @@ task("copy:json", () => {
         .pipe(dest(`${DIST_PATH}/JSON`))
         .pipe(reload({ stream: true })); //перезагрузим браузер (задача выполняется внутри потока (stream:true))
 });
+/*
 task("copy:video", () => {
     return src(`${SRC_PATH}/video/*.mp4`)
         .pipe(dest(`${DIST_PATH}/video`))
+        .pipe(reload({ stream: true })); //перезагрузим браузер (задача выполняется внутри потока (stream:true))
+});
+*/
+task("copy:ico", () => {
+    return src(`${SRC_PATH}*.ico`)
+        .pipe(dest(`${DIST_PATH}`))
         .pipe(reload({ stream: true })); //перезагрузим браузер (задача выполняется внутри потока (stream:true))
 });
 
@@ -139,7 +146,7 @@ task(
     "default", 
     series( "clean", 
         parallel( 
-            parallel( "copy:html", "copy:img", "copy:fonts", "copy:json", "copy:video", "styles", "scripts"),             
+            parallel( "copy:html", "copy:img", "copy:fonts", "copy:json", "copy:ico", "styles", "scripts"),             
             parallel( "watch", "server")
         )
     )
@@ -149,6 +156,6 @@ task(
 task(
     "build", 
     series( "clean",
-        parallel( "copy:html", "copy:img", "copy:fonts", "copy:json", "copy:video", "styles", "scripts")                        
+        parallel( "copy:html", "copy:img", "copy:fonts", "copy:json", "copy:ico", "styles", "scripts")                        
     )    
 );
