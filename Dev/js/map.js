@@ -3,6 +3,7 @@
 
     let YandexMaps = function () {
         ymaps.ready(init); //ждем загрузки api и DOM после чего запускаем функцию init
+        /*
         var placemarks = [ // Массив объектов который мы перебираем методом forEach
             {
               latitude: 55.39439772,
@@ -10,7 +11,7 @@
               hintContent: '<div class="map__hint">Кирова ул. д. 34</div>',
               balloonContent: [
                 '<div class="map__balloon">',
-                '<img class="map__burger-img" src="../img/hero/burger.png" alt="Бургер"/>',
+                '<img class="map__burger-img" src="./img/hero/burger.png" alt="Бургер"/>',
                 "Самые вкусные бургеры, заходите в гости",
                 "</div>"
               ]
@@ -32,13 +33,14 @@
               hintContent: '<div class="map__hint">Ступина ул. д. 23</div>',
               balloonContent: [
                 '<div class="map__balloon">',
-                '<img class="map__burger-img" src="../../img/hero/burger.png" alt="Бургер"/>',
+                '<img class="map__burger-img" src="./img/hero/burger.png" alt="Бургер"/>',
                 "Самые вкусные бургеры, заходите в гости",
                 "</div>"
               ]
             }
           ];
-/* 
+          */
+ 
         var placemarks = []; // Массив объектов который мы перебираем методом forEach
          
         let obj = {
@@ -74,7 +76,7 @@
             });
         };
         getMarks();                
-*/
+
         /*Инициализация функции создания карты и добавление на карту placemark*/
         function init() {
             var map = new ymaps.Map("map", {
