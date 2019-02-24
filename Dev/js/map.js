@@ -20,7 +20,7 @@
         
         //запрос json-данных у сервера, методом GET, без перезагрузки страницы
         let getMarks = function () {
-            let jqxhr = $.getJSON("../../json/placemarks.json", function (data) {
+            let jqxhr = $.getJSON("../json/placemarks.json", function (data) {
                 
                  $.each(data, function (key, value) { 
                     obj = {
