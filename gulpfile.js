@@ -59,7 +59,7 @@ task("copy:video", () => {
 });
 */
 task("copy:ico", () => {
-    return src(`${SRC_PATH}*.ico`)
+    return src(`${SRC_PATH}/*.ico`)
         .pipe(dest(`${DIST_PATH}`))
         .pipe(reload({ stream: true })); //перезагрузим браузер (задача выполняется внутри потока (stream:true))
 });
