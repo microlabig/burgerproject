@@ -47,8 +47,8 @@ task("copy:fonts", () => {
         .pipe(reload({ stream: true })); //перезагрузим браузер (задача выполняется внутри потока (stream:true))
 });
 task("copy:json", () => {
-    return src(`${SRC_PATH}/JSON/**/*.*`)
-        .pipe(dest(`${DIST_PATH}/JSON`))
+    return src(`${SRC_PATH}/json/**/*.*`)
+        .pipe(dest(`${DIST_PATH}/json`))
         .pipe(reload({ stream: true })); //перезагрузим браузер (задача выполняется внутри потока (stream:true))
 });
 /*

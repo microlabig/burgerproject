@@ -20,10 +20,11 @@ $(document).ready(function () {
             ]
         };
 
+        
         //запрос json-данных у сервера, методом GET, без перезагрузки страницы
         let getMarks = function () {
-            let jqxhr = $.getJSON("./Prod/JSON/placemarks.JSON", function (data) {
-                console.log(document.dir);
+            let jqxhr = $.getJSON("../json/placemarks.json", function (data) {
+                
                  $.each(data, function (key, value) { 
                     obj = {
                         latitude: value[0], //широта
@@ -40,8 +41,8 @@ $(document).ready(function () {
                 });                 
             });
         };
-        getMarks();        
-                
+        getMarks();                
+
         /*Инициализация функции создания карты и добавление на карту placemark*/
         function init() {
             var map = new ymaps.Map("map", {
