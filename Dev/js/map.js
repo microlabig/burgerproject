@@ -22,7 +22,7 @@ $(document).ready(function () {
 
         //запрос json-данных у сервера, методом GET, без перезагрузки страницы
         let getMarks = function () {
-            let jqxhr = $.getJSON("../JSON/placemarks.JSON", function (data) {
+            let jqxhr = $.getJSON("../Prod/JSON/placemarks.JSON", function (data) {
 
                  $.each(data, function (key, value) { 
                     obj = {

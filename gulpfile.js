@@ -72,7 +72,7 @@ task("styles", () => {
         .pipe(wait(1000))
         .pipe(concat("main.min.scss"))  //склеиваем normalize.css и main.scss
         .pipe(sassGlob())
-        .pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))   //вывод ошибки при компиляции scss, { outputStyle: 'expand' } - красивый код выходного css
+        .pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError() ))   //вывод ошибки при компиляции scss, { outputStyle: 'expand' } - красивый код выходного css
         //.pipe(px2rem())   //переведем единицы измерения (px->rem)
         .pipe(gulpif(env==='dev', 
             autoprefixer({
