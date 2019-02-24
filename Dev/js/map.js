@@ -1,8 +1,6 @@
 //Яндекс-карты
 (function() {
 
-$(document).ready(function () {
-
     let YandexMaps = function () {
         ymaps.ready(init); //ждем загрузки api и DOM после чего запускаем функцию init
 
@@ -19,7 +17,6 @@ $(document).ready(function () {
                 '</div>'
             ]
         };
-
         
         //запрос json-данных у сервера, методом GET, без перезагрузки страницы
         let getMarks = function () {
@@ -74,5 +71,4 @@ $(document).ready(function () {
         }
     };
     YandexMaps();
-});
 })();
