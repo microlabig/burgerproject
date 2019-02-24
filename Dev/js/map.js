@@ -3,9 +3,44 @@
 
     let YandexMaps = function () {
         ymaps.ready(init); //ждем загрузки api и DOM после чего запускаем функцию init
-
+        var placemarks = [ // Массив объектов который мы перебираем методом forEach
+            {
+              latitude: 55.39439772,
+              longitude: 43.81939817,
+              hintContent: '<div class="map__hint">Кирова ул. д. 34</div>',
+              balloonContent: [
+                '<div class="map__balloon">',
+                '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
+                "Самые вкусные бургеры, заходите в гости",
+                "</div>"
+              ]
+            },
+            {
+              latitude: 55.39403744,
+              longitude: 43.81377626,
+              hintContent: '<div class="map__hint">1 мая ул. д. 11</div>',
+              balloonContent: [
+                '<div class="map__balloon">',
+                '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
+                "Самые вкусные бургеры, заходите в гости",
+                "</div>"
+              ]
+            },
+            {
+              latitude: 55.39221156,
+              longitude: 43.81851841,
+              hintContent: '<div class="map__hint">Ступина ул. д. 23</div>',
+              balloonContent: [
+                '<div class="map__balloon">',
+                '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
+                "Самые вкусные бургеры, заходите в гости",
+                "</div>"
+              ]
+            }
+          ];
+/* 
         var placemarks = []; // Массив объектов который мы перебираем методом forEach
-        
+         
         let obj = {
             latitude: .0, //широта
             longitude: .0, //долгота
@@ -17,7 +52,7 @@
                 '</div>'
             ]
         }; 
-        
+      
         //запрос json-данных у сервера, методом GET, без перезагрузки страницы
         let getMarks = function () {
             let jqxhr = $.getJSON("../json/placemarks.json", function (data) {
@@ -39,7 +74,7 @@
             });
         };
         getMarks();                
-
+*/
         /*Инициализация функции создания карты и добавление на карту placemark*/
         function init() {
             var map = new ymaps.Map("map", {
