@@ -10,7 +10,7 @@
               hintContent: '<div class="map__hint">Кирова ул. д. 34</div>',
               balloonContent: [
                 '<div class="map__balloon">',
-                '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
+                '<img class="map__burger-img" src="../img/hero/burger.png" alt="Бургер"/>',
                 "Самые вкусные бургеры, заходите в гости",
                 "</div>"
               ]
@@ -21,7 +21,7 @@
               hintContent: '<div class="map__hint">1 мая ул. д. 11</div>',
               balloonContent: [
                 '<div class="map__balloon">',
-                '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
+                '<img class="map__burger-img" src="./img/hero/burger.png" alt="Бургер"/>',
                 "Самые вкусные бургеры, заходите в гости",
                 "</div>"
               ]
@@ -32,7 +32,7 @@
               hintContent: '<div class="map__hint">Ступина ул. д. 23</div>',
               balloonContent: [
                 '<div class="map__balloon">',
-                '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
+                '<img class="map__burger-img" src="../../img/hero/burger.png" alt="Бургер"/>',
                 "Самые вкусные бургеры, заходите в гости",
                 "</div>"
               ]
