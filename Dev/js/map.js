@@ -22,8 +22,8 @@ $(document).ready(function () {
 
         //запрос json-данных у сервера, методом GET, без перезагрузки страницы
         let getMarks = function () {
-            let jqxhr = $.getJSON("./JSON/placemarks.JSON", function (data) {
-
+            let jqxhr = $.getJSON("./Prod/JSON/placemarks.JSON", function (data) {
+                console.log(document.dir);
                  $.each(data, function (key, value) { 
                     obj = {
                         latitude: value[0], //широта
