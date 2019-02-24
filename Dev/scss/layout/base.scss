@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box; 
+}
+
+html {
+    font-size: $basefontsize;
+    /*
+    position: relative; // прибитие футера`
+    min-height: 100%;   // прибитие футера
+    */
+    @include phones-small {
+        font-size: $basefontsize-phonesmall;
+    }
+}
+
+body {
+    font-family: 'ubuntu', Helvetica, sans-serif;
+    line-height: 1.45;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-smoothing: antialiased;  
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+ul, 
+li,
+p {
+    margin:0;
+    padding:0;
+}
+
+
+h1,h2,h3,h4,h5 {
+    font-weight:normal; 
+    margin:0;
+}
+
+h1,h2,h4 {
+    font-family: 'gagalin', Verdana, Tahoma, sans-serif;
+    line-height: 0.95;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-smoothing: antialiased; 
+
+    font-size: rem($titlefontsize);
+    text-transform: uppercase;
+
+    @include phones {
+        font-size: rem($titlefontsize-phone);
+    }
+}
+
+h3 {
+    font-family: 'lifehack', fantasy, sans-serif;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-smoothing: antialiased; 
+}
+
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    touch-action: none;
+    height:100%;
+}
+
+.content {
+    width: 100%; 
+    height: 100%;
+    transition: transform 0.7s;
+    will-change: transform;
+}
+
+.button {
+    border-radius: 5px;
+    background-color: $red; 
+
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $white;
+    font-weight: $medium;
+    font-size: rem(13px);
+
+    padding: rem(8px) rem(13px);
+
+    &:hover {
+        background-color: darken($red, 10%); 
+        transition: .4s;
+    }
+}
+
+.container {
+    width: 96%;
+    @include tablets {
+        max-width: 100%;
+    }
+    @include phones {
+        width: 100%;
+    }
+}

@@ -1,0 +1,106 @@
+.button-nav {
+    position: fixed;
+    top: rem(90px);
+    right: rem(50px);
+    z-index: 10;  
+    @include tablets {
+        top: rem(39px);
+        right: rem(16px);
+    }      
+    @include phones {
+        right: rem(10px);
+    }   
+}
+
+.button-nav__list {
+    display: flex;
+    flex-direction: column;
+    @include tablets {
+        display: none;
+    }
+}
+
+.button-nav__item {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+
+    margin-bottom: rem(15px); 
+
+    &:last-child {
+        margin-bottom: 0; 
+    }
+
+    &:after {
+        @include circle_fixed;        
+    }
+    &:hover:after {
+        border-color: $white;
+        transition: border-color .4s;
+    }
+}
+
+.button-nav__dot {
+    display: inline-block;
+    @include circle(rem(6px), rem(1px), transparent, $white);
+}
+
+.button-nav__item--active:after {
+    @include circle_fixed;
+    border-color: $white;   
+    transition: .4s; 
+}
+
+// mobile button navigation
+
+.button-nav__mobile {
+    display: none;
+    margin-right: 0;
+    cursor: pointer; 
+    width:24px;
+
+    @include tablets {
+        display: inline-block;
+    }
+}
+
+.button-nav__mobile-line {
+    border: 2px solid $white;
+    margin-bottom: rem(5px);
+    border-radius: 2px;
+    background-color: $white;
+
+    &:last-child {
+        margin-bottom: 0;        
+    }
+    transition: .4s;
+}
+
+// когда щелкнули по меню
+.button-nav__mobile.open {
+    margin-right: rem(11px);
+}
+
+.open .button-nav__mobile-line {  
+    border-color: $phone-menu;   
+    background-color: $phone-menu; 
+    &:first-child {
+        transform-origin: left 50%;
+        transform: rotate(45deg) ;
+        transition: .4s;
+    }
+    &:nth-child(2) {
+        //display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+    &:last-child {
+        transform-origin: left 50%;
+        transform: rotate(-45deg) ;
+        transition: .4s;
+    }
+}

@@ -1,0 +1,206 @@
+.menu {
+    & .container {    
+        width: 100%;    
+        display: flex;
+        flex-direction: initial;
+        justify-content: space-between;
+        
+        position: relative;
+    }
+}
+
+/* left block */
+
+.menu__left-block {
+    flex-basis: 30%;
+    @include tablets {
+        margin-left: rem(24px);
+    }
+}
+
+.menu__title-block {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tablets {
+        height: 30%;
+    }
+}
+
+.menu__title {
+    color: $white;
+}
+
+.menu__dummy {
+    width: 100%;
+    height: 50%;
+    @include tablets {
+        height: 70%;
+    }
+}
+
+/* Right-block */
+
+.menu__right-block {
+    position: absolute;
+    width: 70%;   
+    height: 100%; 
+    right:0;
+    @include tablets {
+        width: 100%;
+    }
+}
+
+.menu__list{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+    @include phones-small {
+        font-size: rem(12px);
+    }
+}
+
+.menu__item {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;  
+/*
+    &:hover {        
+        .menu__item-description {
+            width: 100%;
+            transition: width .2s;                 
+        }                
+        .menu__item-title {
+            color: $yellow;        
+        } 
+        .menu__close {
+            @include phones {     
+                display: inline-block;
+            }
+        }
+        @include phones {                   
+            position: absolute;
+            z-index: 1;
+            width: 100%; 
+        }  
+    }   
+    */
+}
+
+.menu__item--active {
+    & .menu__item-description {
+        width: 100%; 
+        transition: width .2s;       
+    }
+    & .menu__item-title {
+        color: $yellow;
+    }
+    & .menu__close {
+        @include phones {     
+            display: inline-block;
+        }
+    }
+    & .menu__item-text {
+        opacity: 1;
+        transition: opacity .5s;
+    }
+    @include phones {        
+        position: absolute;
+        z-index: 1;
+        width: 100%;                
+    }         
+}
+
+.menu__item-title--weat {
+    background-image: url('../img/menu/fon-myasoeds.jpg');
+}
+.menu__item-title--vegan {
+    background-image: url('../img/menu/fon-vegans.jpg');
+}
+.menu__item-title--diet {
+    background-image: url('../img/menu/fon-diets.jpg');
+}
+
+.menu__item-title-block {
+    flex-shrink: 0;
+    
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+
+    @include bg(cover, center center);
+    width: rem(80px);
+    height: 100%;  
+
+    &:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        min-width: 100%;
+        height: 100%;
+        background-color: rgba(51, 51, 51, .8);
+    }
+    @include phones-small {
+        width: rem(60px);
+    }
+}
+
+.menu__item-title {    
+    /*
+    transform: rotate(-90deg);
+    transform-origin: 0 0; 
+    */    
+    font-size: rem(40px);
+    color: $white; 
+    white-space: nowrap;
+    writing-mode: vertical-lr;
+    transform: scale(-1);
+    margin-bottom: rem(40px); 
+    @include phones-small {
+        font-size: rem(34px);
+    } 
+}
+
+.menu__item-description {    
+    width: 0;
+    height: 100%;
+    background-color: rgba(51, 51, 51, .95);    
+}
+
+.menu__item-text {    
+    font-weight: $light;
+    color: $white;
+    line-height: rem(24px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;    
+    padding: rem(60px) rem(35px); 
+    opacity: 0;
+    @include phones-small{
+        padding: rem(60px) rem(15px);
+    }    
+}
+
+.menu__close {
+    z-index: 2;
+    display: none;
+    position: absolute;    
+
+    width: rem(20px);
+    height: rem(20px);
+
+    background-image: url('../img/menu/close_menu.png');
+    @include bg(contain, center center);
+
+    top: rem(30px);
+    right: rem(30px);     
+}
+
+

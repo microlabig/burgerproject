@@ -1,0 +1,85 @@
+/* hero */
+
+.hero {
+    position: relative;
+    
+    & .container {
+        max-width: rem(940px);
+        /*
+        @include tablets {
+            max-width: rem(768px);
+        }
+        */
+        @include phones {
+            max-width: 100%;
+            padding: 0 5%;
+        }
+    }
+
+}
+
+.hero .sections__title {    
+    margin-bottom: rem(30px);
+    @include tablets {
+        font-size: 5em;
+    }
+    @include phones {
+        white-space: nowrap;
+        font-size: 4em;
+    }
+}
+
+.sections__content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tablets {
+        flex-direction: column; 
+    }
+    @include phones {
+        padding: 0 16%;
+    }
+}
+
+.section__burger {
+    position: relative;
+    display: inline-block;
+    max-width: rem(417px);
+    max-height: rem(424px);
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: rem(11px);
+    
+    @include tablets {
+        margin-right: 0;
+        margin-bottom: rem(40px);
+    }
+}
+
+.sections__burger-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.sections__slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: min-content;
+    margin-top:rem(32px);
+    @include tablets {
+        text-align: center;
+        margin-top:0;
+    }
+}
+
+.sections__slogan-title2 {
+    color: $white;
+    font-size: rem(65px);
+    line-height: rem(60px);
+    @include phones {
+        font-size: 3em;
+    }
+}
+

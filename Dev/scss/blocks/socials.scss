@@ -1,0 +1,47 @@
+/* socials */
+
+.social-list{
+    display: flex;    
+}
+
+.social-item{
+    margin-right: rem(20px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover .social-img:before{
+        filter: brightness(1);
+        transition: filter .5s;
+    }    
+}
+
+.social-text{
+    display: none;
+}
+
+.social-img{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+@each $social in (vk, fb, instagram, tw) {
+    .social-im--#{$social}:before{
+        $width: rem(20px);
+        $height: rem(20px);
+
+        @if ($social == vk) {
+            $width: rem(23px);
+            $height: rem(13px);
+        } 
+        @if ($social == tw) {
+            $width: rem(20px);
+            $height: rem(16px);
+        } 
+
+        @include socialimg($width, $height);
+        background-image: url('../img/contacts/#{$social}.svg'); 
+    }
+}

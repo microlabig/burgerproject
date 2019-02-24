@@ -1,0 +1,16 @@
+.arrow-scroll__block {     
+    text-align: center;  
+    margin-bottom: rem(30px);
+}
+
+.arrow-scroll__link {
+    display: inline-block;
+    width: rem(29px);
+    height: rem(15px);   
+}
+
+.arrow-scroll__icon {
+    fill: $white;
+    @include imgsize(contain);    
+    animation: Up-Down 1s infinite;
+}

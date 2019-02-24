@@ -1,0 +1,54 @@
+.overlay {
+    display: none;  
+    position: absolute;
+    background-color: $bgmenu;
+    z-index: 2;      
+    min-width: 100%; 
+    min-height: 100%; 
+
+    &.active{
+        display: initial;
+    }
+
+    & .container {
+        position: absolute;
+        width: 100%;
+    }
+
+    & .logo {
+        position: absolute;
+        margin-top: rem(13px);
+        margin-left: rem(24px);
+        cursor: pointer; 
+    }
+
+    & .navigation__wrapper {
+        //position: absolute;
+        display: inline-block;
+        width: 100%;
+        align-self: center;     
+    }
+    
+    & .navigation__list {
+        height: 100%;        
+        margin: 0 auto;
+        @include centered(initial,'default');        
+    }
+
+    & .navigation__item {        
+        visibility: hidden;       
+        opacity: 0;
+        animation-fill-mode: forwards;
+    }
+    
+    & .navigation__text {        
+        font-size: rem(24px);        
+    }
+
+    & .header__button {
+        display: none;
+        visibility: hidden;
+    }
+
+}
+

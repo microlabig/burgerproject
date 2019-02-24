@@ -5,6 +5,6 @@
 
 **Наставник:** Максим Иванов
  
-**Ссылка на проект:** [https://microlabig.github.io/burgerproject/app](https://microlabig.github.io/burgerproject/app "Проект Mr.Burger")
+**Ссылка на проект:** [https://microlabig.github.io/burgerproject/Prod](https://microlabig.github.io/burgerproject/Prod "Проект Mr.Burger")
 
 
