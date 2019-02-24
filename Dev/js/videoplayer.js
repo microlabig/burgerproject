@@ -97,7 +97,6 @@
     */
     function updateDuration() {
         durationControl.value = video.currentTime;
-        // console.log(video.currentTime)
     }
 
 
@@ -134,8 +133,6 @@
              video.volume 0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9  1 
        soundControl.value 0   1   2   3   4   5   6   7   8   9  10
             */
-
         video.volume = soundControl.value / 10;
-        console.log(video.volume)
     }
 })();

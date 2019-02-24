@@ -15,7 +15,9 @@ const rm = require("gulp-rm"),  //плагин удаления файлов
     uglify = require('gulp-uglify'), //плагин минификации JS
     svgo = require("gulp-svgo"), //плагин убирает лишнее из SVG
     svgSprite = require("gulp-svg-sprite"), //собирает все файлы SVG в один
-    gulpif = require("gulp-if"); //плагин условия
+    gulpif = require("gulp-if"), //плагин условия
+    notify = require("gulp-notify"), //плагин внешних уведомлений
+    wait = require("gulp-wait"); //плагин временоой задержки
 
 const {SRC_PATH, DIST_PATH, STYLES_LIBS, JS_LIBS} = require("./gulp.config"); //подключаем файл конфига
 
@@ -25,7 +27,7 @@ sass.compiler = require("node-sass"); //используем препроцес�
 
 //удаление файлов
 task("clean", () => {  
-    return src(`${DIST_PATH}/**/*`, { read: false }).pipe(rm());
+    return src(`${DIST_PATH}/**/*`, { read: false }).pipe(rm());   
 });
 
 //копирование файлов
@@ -60,9 +62,10 @@ task("copy:video", () => {
 task("styles", () => {
     return src([...STYLES_LIBS, `${SRC_PATH}/scss/main.scss`])
         .pipe(gulpif(env==='dev', sourcemaps.init())) //инициализация запись sourcemap 
+        .pipe(wait(1000))
         .pipe(concat("main.min.scss"))  //склеиваем normalize.css и main.scss
         .pipe(sassGlob())
-        .pipe(sass().on("error", sass.logError))   //вывод ошибки при компиляции scss
+        .pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))   //вывод ошибки при компиляции scss, { outputStyle: 'expand' } - красивый код выходного css
         //.pipe(px2rem())   //переведем единицы измерения (px->rem)
         .pipe(gulpif(env==='dev', 
             autoprefixer({
@@ -82,7 +85,8 @@ task("server", function() {
         server: {
             baseDir: `./${DIST_PATH}`
         },
-        open: false //не запускать браузер при старте сервера
+        open: false, //не запускать браузер при старте сервера
+        notify: false
     });
 });
 
@@ -135,9 +139,8 @@ task(
     "default", 
     series( "clean", 
         parallel( 
-            parallel( "copy:html", "copy:img", "copy:fonts", "copy:json", "copy:video"), 
-            parallel("styles", "scripts"), 
-            parallel("watch", "server")
+            parallel( "copy:html", "copy:img", "copy:fonts", "copy:json", "copy:video", "styles", "scripts"),             
+            parallel( "watch", "server")
         )
     )
 );
@@ -146,7 +149,6 @@ task(
 task(
     "build", 
     series( "clean",
-        parallel( "copy:html", "copy:img", "copy:fonts", "copy:json", "copy:video"), 
-        parallel("styles", "scripts")
+        parallel( "copy:html", "copy:img", "copy:fonts", "copy:json", "copy:video", "styles", "scripts")                        
     )    
 );

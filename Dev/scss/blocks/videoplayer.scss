@@ -8,16 +8,13 @@
 .duration__img-block {
     width: rem(16px);
     height: rem(22px);
+    margin-left: 3%;
 }
 
 .duration__img {
     fill: $button-control;
     max-width: 100%;
     max-height: 100%;
-    margin: 0 100%;
-    @include tablets {
-        margin: 0 80%;
-    }
 }
 
 .duration__length {

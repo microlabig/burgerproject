@@ -73,8 +73,8 @@
                         </div>
                     </div>
                     <div data-scroll-to="1" class="arrow-scroll__block">
-                        <a href="#" class="arrow-scroll__link">
-                            <svg class="arrow-scroll__icon">
+                        <a href="#" class="arrow-scroll__link" data-scroll-to="1">
+                            <svg class="arrow-scroll__icon" data-scroll-to="1">
                                 <use xlink:href="./img/sprite.svg#arrow-scroll"></use>
                             </svg>
                         </a>
@@ -1100,38 +1100,10 @@
 
             <section id="howwork" class="sections howwork">
                 <div class="container">
-                    <h1 class="sections__title">Как мы работаем</h1>
-                    <!-- <div class="videoplayer">
-                        <div class="videoplayer__preview">
-                            <video id="player" class="videoplayer__play" poster="./img/howwork/photo.jpg">                                
-                                <source src="https://youtu.be/zry4N4Cq-pc" type="video/mp4">
-                            </video> 
-                            <div class="videoplayer__image">
-                                <img src="./img/howwork/photo.jpg" alt="Видео" class="videoplayer__image-block">
-                            </div>  
-                            <svg class="videoplayer__playicon">
-                                <use xlink:href="./img/howwork/sprite.svg#play"></use>
-                            </svg>                           
-                        </div>
-                        <div class="videoplayer__toolbar">
-                            <a href="#" class="videoplayer__play-button">
-                                <svg class="videoplayer__play--control">
-                                    <use xlink:href="./img/howwork/sprite.svg#play"></use>
-                                </svg>
-                            </a>
-                            <div class="videoplayer__shkala"></div>
-                            <a href="#" class="videoplayer__volume">
-                                <svg class="videoplayer__volumeicon">
-                                    <use xlink:href="./img/howwork/sprite.svg#volume"></use>
-                                </svg>
-                            </a>
-                            <div class="videoplayer__sound-meter"></div>
-                        </div>
-                    </div> -->
+                    <h1 class="sections__title">Как мы работаем</h1>                   
                     <div class="video__container">
                         <div class="video__player">
-                            <video id="player" poster="./img/howwork/cover.jpg">
-                                <!-- <source src="https://yadi.sk/i/2P99vHZY7SHRxg" type="video/mp4"> -->
+                            <video id="player" poster="./img/howwork/cover.jpg">                                
                                 <source src="./video/burger.mp4" type="video/mp4">     
                             </video>
                             <a href="#" class="video__player-img">
@@ -1142,15 +1114,14 @@
                         </div>
                         <div class="video__toolbar">
                             <div class="duration">                                
-                                <a href="#" class="play duration__img-block">
+                                <a href="#" class="duration__img-block">
                                     <svg class="play duration__img">
                                         <use xlink:href="./img/howwork/sprite.svg#play"></use>
                                     </svg>
                                 </a> 
                                 <input type="range" class="duration__length" id="durationLevel">
                             </div>
-                            <div class="sound">
-                               <!--  <img src="./img/player/Volum_gray.png" class="sound__mic" id="mic" alt=""> -->
+                            <div class="sound">                               
                                <a href="#" class="sound__mic-block">
                                     <svg class="sound__mic" id="mic">
                                         <use xlink:href="./img/howwork/sprite.svg#volume"></use>
